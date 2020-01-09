@@ -22,6 +22,10 @@ export default function Error({ statusCode }) {
                         ? `Erreur : ${statusCode}`
                         : 'Une erreur s\'est produite'}
                 </p>
+                {statusCode == 404
+                    ? <img src='/assets/image/undraw_page_not_found.png' />
+                    : ''}
+
             </div>
             <Footer />
         </div >

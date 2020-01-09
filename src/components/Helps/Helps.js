@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default class HelpsComponent extends React.Component {
-    // LIFE CYCLE
     constructor() {
         super();
         this.state = {

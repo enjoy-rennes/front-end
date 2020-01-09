@@ -17,7 +17,9 @@ export default function Map() {
             <Header />
             <div className='Content text-center'>
                 <h2>La carte</h2>
-                <MapComponent />
+                <div className='d-flex justify-content-center'>
+                    <MapComponent />
+                </div>
             </div>
             <Footer />
         </div >
