@@ -3,6 +3,7 @@ import Head from 'next/head';
 import HeadCommon from '../components/Head/Head';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ContactForm from '../components/contactForm/contactForm';
 
 export default function Contact() {
     return (
@@ -16,6 +17,7 @@ export default function Contact() {
             <Header />
             <div className='Content text-center'>
                 <h2>Contact</h2>
+                <ContactForm />
             </div>
             <Footer />
         </div >

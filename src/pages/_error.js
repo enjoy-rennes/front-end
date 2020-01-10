@@ -2,6 +2,7 @@ import React from 'react';
 import HeadCommon from '../components/Head/Head';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Error404Component from '../components/Error/Error404';
 
 export default function Error({ statusCode }) {
     return (
@@ -23,7 +24,7 @@ export default function Error({ statusCode }) {
                         : 'Une erreur s\'est produite'}
                 </p>
                 {statusCode == 404
-                    ? <img src='/assets/image/undraw_page_not_found.png' />
+                    ? <Error404Component />
                     : ''}
 
             </div>

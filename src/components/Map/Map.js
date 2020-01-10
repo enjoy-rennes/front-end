@@ -4,8 +4,8 @@ export default class MapsComponent extends React.Component {
     constructor() {
         super();
         this.state = {
-            height: 1000,
-            width: 600,
+            height: 600,
+            width: 800,
         }
     }
 
