@@ -4,17 +4,29 @@ export default class MapsComponent extends React.Component {
     constructor() {
         super();
         this.state = {
-            height: 700,
-            width: 1000,
+            height: 1000,
+            width: 600,
         }
     }
 
     render() {
         const { height, width } = this.state;
         return (
-            <div>
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1pPeYlRv_9iFegtoMHVb8sE_n5sIdyEGz" width={width} height={height}></iframe>
-            </div>
+            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
         );
     }
+
+    updateDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight - 200 });
+    };
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+        this.updateDimensions();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
 }
