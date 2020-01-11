@@ -10,7 +10,7 @@ export default function Helps() {
         <div className="App">
             <HeadCommon />
             <Head>
-                <meta name='description' content='Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, des réductions et des moyens anti-gaspi.' />
+                <meta name='description' content='Découvrez les aides que vous pouvez bénéficier dès à présent.' />
                 <title>Enjoy Rennes - Calculer mes aides</title>
             </Head>
 

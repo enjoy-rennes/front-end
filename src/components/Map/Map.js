@@ -12,7 +12,7 @@ export default class MapsComponent extends React.Component {
     render() {
         const { height, width } = this.state;
         return (
-            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
+            <iframe title='enjoy-rennes-maps' src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
         );
     }
 
