@@ -1,51 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Welcome to enjoy-rennes 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## Available Scripts
+> web application
 
-In the project directory, in first you can run:
+## Install
 
-### `yarn install`
+```sh
+yarn install
+```
 
-for install dependencies, then you can run :
+## Usage
 
-### 'yarn dev'
+```sh
+yarn dev  
+```
 
-dev - Runs next which starts Next.js in development mode
+## Author
 
-### 'yarn build'
+👤 **PANNETIER Alexis**
 
-build - Runs next build which builds the application for production usage
+* Github: [@Alexis-Pannetier](https://github.com/Alexis-Pannetier)
 
-### 'yarn start'
+## Show your support
 
-start - Runs next start which starts a Next.js production server
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Give a ⭐️ if you like the project !
