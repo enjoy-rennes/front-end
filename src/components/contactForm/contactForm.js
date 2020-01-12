@@ -4,7 +4,7 @@ import { IoIosMail } from 'react-icons/io';
 import { FaUser } from 'react-icons/fa';
 import { TiDocumentText } from 'react-icons/ti';
 
-export default class Header extends React.Component {
+export default class ContactForm extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -26,7 +26,6 @@ export default class Header extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
         fetch('http://localhost:3002/send', {
             method: "POST",
             body: JSON.stringify(this.state),
@@ -47,18 +46,19 @@ export default class Header extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <Form onSubmit={this.handleSubmit} className='m-auto' >
                 <Form.Row>
-                    <Form.Group as={Col} md={{ span: 8, offset: 2 }} controlId='validationCustom01'>
+                    <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
                         <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text>
-                                    <FaUser />
+                                    <FaUser id='name-input' />
                                 </InputGroup.Text>
                             </InputGroup.Prepend>
                             <Form.Control
+                                aria-label="Name"
+                                aria-describedby="name-input"
                                 name='name'
                                 onChange={this.handleInputChange}
                                 placeholder='Name'
@@ -70,15 +70,16 @@ export default class Header extends React.Component {
                 </Form.Row>
 
                 <Form.Row>
-                    <Form.Group as={Col} md={{ span: 8, offset: 2 }} controlId='validationCustomUsername'>
+                    <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
                         <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text>
-                                    <IoIosMail />
+                                    <IoIosMail id='email-input' />
                                 </InputGroup.Text>
                             </InputGroup.Prepend>
                             <Form.Control
-                                aria-describedby='inputGroupPrepend'
+                                aria-label="Email"
+                                aria-describedby="email-input"
                                 name='email'
                                 onChange={this.handleInputChange}
                                 placeholder='E-mail*'
@@ -90,17 +91,23 @@ export default class Header extends React.Component {
                 </Form.Row>
 
                 <Form.Row>
-                    <Form.Group as={Col} md={{ span: 8, offset: 2 }} controlId='validationCustom03'>
+                    <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
                         <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text>
-                                    <TiDocumentText />
+                                    <TiDocumentText id='description-input' />
                                 </InputGroup.Text>
                             </InputGroup.Prepend>
-                            <Form.Control as='textarea' placeholder='Message*' required />
+                            <Form.Control
+                                aria-label="Description"
+                                aria-describedby="description-input"
+                                as='textarea'
+                                placeholder='Message*'
+                                required />
                         </InputGroup>
                     </Form.Group>
                 </Form.Row>
+
                 <Form.Group>
                     <Form.Check type='checkbox' id='checkbox-conditions'>
                         <Form.Check.Input
@@ -111,7 +118,8 @@ export default class Header extends React.Component {
                         <Form.Check.Label>Accepter les termes et conditions*</Form.Check.Label>
                     </Form.Check>
                 </Form.Group>
-                <Button type='submit'>Submit form</Button>
+
+                <Button className='text-light' variant='dark' type='submit'>Submit form</Button>
             </Form>
         );
     }
