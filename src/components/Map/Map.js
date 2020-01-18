@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export default class MapsComponent extends React.Component {
+export default class MapComponent extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -12,7 +12,7 @@ export default class MapsComponent extends React.Component {
     render() {
         const { height, width } = this.state;
         return (
-            <iframe title='enjoy-rennes-maps' src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
+            <iframe className="map-component" title="enjoy-rennes-maps" src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
         );
     }
 
@@ -21,12 +21,12 @@ export default class MapsComponent extends React.Component {
     };
 
     componentDidMount() {
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener("resize", this.updateDimensions);
         this.updateDimensions();
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener("resize", this.updateDimensions);
     }
 
 }

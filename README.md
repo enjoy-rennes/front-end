@@ -1,17 +1,17 @@
-<h1 align="center">Welcome to enjoy-rennes 👋</h1>
+<h1 align='center'>Welcome to enjoy-rennes 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt='Version' src='https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000' />
 </p>
 
-> web application
+> React application
 
-## Install
+## 💾 Install
 
 ```sh
 yarn install
 ```
 
-## Usage
+## 🔨 Usage
 
 ```sh
 yarn dev  
