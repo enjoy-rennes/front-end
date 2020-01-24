@@ -2,7 +2,7 @@
 import React from "react";
 import Head from "next/head";
 // COMPONENT
-import AppLayout from '../components/AppLayout';
+import AppLayout from "../components/AppLayout";
 import Error404Component from "../components/Error404";
 
 function Error({ statusCode }) {
@@ -18,7 +18,7 @@ function Error({ statusCode }) {
                 <p>
                     {statusCode
                         ? `Erreur : ${statusCode}`
-                        : "Une erreur s\'est produite"}
+                        : "Une erreur s'est produite"}
                 </p>
                 {statusCode == 404
                     ? <Error404Component />

@@ -2,7 +2,7 @@
 import Head from "next/head";
 import React from "react";
 // COMPONENT
-import AppLayout from '../components/AppLayout';
+import AppLayout from "../components/AppLayout";
 import ContactForm from "../components/ContactForm";
 
 function ContactPage() {

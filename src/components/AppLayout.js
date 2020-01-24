@@ -1,9 +1,9 @@
 // DEPENDENCY
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // COMPONENT
-import Footer from './Footer';
-import Head from './Head';
-import Header from './Header';
+import Footer from "./Footer";
+import Head from "./Head";
+import Header from "./Header";
 // CSS FILE
 
 const AppLayout = (ComposedComponent) => {

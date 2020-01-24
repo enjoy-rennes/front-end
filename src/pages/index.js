@@ -1,16 +1,12 @@
 // DEPENDENCY
-import { Gradient } from 'react-gradient';
+import { Gradient } from "react-gradient";
 import Head from "next/head";
 import React from "react";
 // COMPONENT
-import AppLayout from '../components/AppLayout';
+import AppLayout from "../components/AppLayout";
+import HomeComponent from "../components/Home";
 
-const gradients = [
-    ['#bd19d6', '#ea7d10'],
-    // ['#ff2121', '#25c668'],
-];
-
-const HomePage = () => {
+const indexPage = () => {
     return (
         <div className="home-page page">
             <Head>
@@ -18,17 +14,10 @@ const HomePage = () => {
                 <title>Enjoy Rennes</title>
             </Head>
 
-            <Gradient
-                className="d-flex text-center h-100"
-                gradients={gradients} // required
-                property="background"
-                // duration={3000}
-                angle="45deg" >
+            <HomeComponent />
 
-                <span className="align-self-center" style={{ textTransform: "uppercase", fontWeight: "bold", fontSize: "48px", textAlign: "left" }}>Retrouver rapidement les <span style={{ color: "purple" }}>bons plans</span> de la ville de Rennes</span>
-            </Gradient>
         </div >
     );
 }
 
-export default AppLayout(HomePage);
+export default AppLayout(indexPage);
