@@ -1,25 +1,24 @@
-import React from "react";
+// DEPENDENCY
 import Head from "next/head";
-import HeadCommon from "../components/Head/Head";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import ContactForm from "../components/ContactForm/ContactForm";
+import React from "react";
+// COMPONENT
+import AppLayout from '../components/AppLayout';
+import ContactForm from "../components/ContactForm";
 
-export default function Contact() {
+function ContactPage() {
     return (
-        <div className="App">
-            <HeadCommon />
+        <div className="contact-page page">
             <Head>
                 <meta name="description" content="Contacter Enjoy Rennes." />
                 <title>Enjoy Rennes - Contact</title>
             </Head>
 
-            <Header />
             <div className="Content text-center">
                 <h2>Contact</h2>
                 <ContactForm />
             </div>
-            <Footer />
         </div >
     );
 }
+
+export default AppLayout(ContactPage);

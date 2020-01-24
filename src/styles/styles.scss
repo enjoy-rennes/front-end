@@ -1,5 +1,41 @@
-// Global StyleSheet
+// -----GLOBAL STYLESHEET-----
+// PARAMETER
+$primary-color:yellow;
+$secondary-color:blue;
+$red-color:red;
+$header-height: 56px;
+
+// DISPLAY
 body {
-    font-family: 'SF Pro Text', 'SF Pro Icons', system-ui;
-    margin: 0 auto;
-  }
+  font-family: 'SF Pro Text', 'SF Pro Icons', system-ui;
+  margin: 0 auto;
+}
+
+.page {
+  height: calc(100vh - #{$header-height} );
+}
+
+// COLOR
+.text-primary {
+  color: $primary-color!important;
+}
+
+.text-secondary {
+  color: $secondary-color!important;
+}
+
+.text-red {
+  color: $red-color!important;
+}
+
+.bg-primary {
+  background-color: $primary-color!important;
+}
+
+.bg-secondary {
+  background-color: $secondary-color!important;
+}
+
+.bg-red {
+  background-color: $red-color!important;
+}

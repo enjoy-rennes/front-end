@@ -1,7 +1,9 @@
+// DEPENDENCY
 import React from "react";
-import HelpsListComponent from "../HelpsList/HelpsList";
-import HelpsFormComponent from "../HelpsForm/HelpsForm";
 import { Col, Container, Row } from "react-bootstrap";
+// COMPONENT
+import HelpsListComponent from "./HelpsList";
+import HelpsFormComponent from "./HelpsForm";
 
 export default class HelpsComponent extends React.Component {
     constructor() {

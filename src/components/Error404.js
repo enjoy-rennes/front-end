@@ -1,3 +1,4 @@
+// DEPENDENCY
 import React from "react";
 
 export default class Error404Component extends React.Component {

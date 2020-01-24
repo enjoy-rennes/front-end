@@ -1,6 +1,6 @@
+// DEPENDENCY
 import React from "react";
-import { Accordion, Card, ListGroup } from "react-bootstrap";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { Accordion, Card } from "react-bootstrap";
 
 export default class HelpsListComponent extends React.Component {
     constructor() {
