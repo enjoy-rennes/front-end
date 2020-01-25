@@ -1,22 +1,35 @@
 // DEPENDENCY
-import { Gradient } from "react-gradient";
 import Head from "next/head";
 import React from "react";
+import { Layout } from 'antd';
+
 // COMPONENT
 import AppLayout from "../components/AppLayout";
+import FooterComponent from "../components/Footer";
+import HeaderComponent from "../components/Header";
 import HomeComponent from "../components/Home";
+
+const { Header, Content, Footer } = Layout;
 
 const indexPage = () => {
     return (
-        <div className="home-page page">
-            <Head>
-                <meta name="description" content="Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, aides au logement, des réductions et des moyens anti-gaspi." />
-                <title>Enjoy Rennes</title>
-            </Head>
+        <Layout className="home-page">
+            <Header className="header">
+                <Head>
+                    <meta name="description" content="Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, aides au logement, des réductions et des moyens anti-gaspi." />
+                    <title>Enjoy Rennes</title>
+                </Head>
+                <HeaderComponent pathName="home" />
+            </Header>
 
-            <HomeComponent />
+            <Content className="content">
+                <HomeComponent />
+            </Content>
 
-        </div >
+            <Footer>
+                <FooterComponent />
+            </Footer>
+        </Layout >
     );
 }
 

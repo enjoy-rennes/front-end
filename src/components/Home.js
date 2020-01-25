@@ -1,13 +1,17 @@
 // DEPENDENCY
 import { Gradient } from "react-gradient";
 import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "antd";
+
+// PARAMETER
+const primaryColor = "#F2E2FC";
+const secondaryColor = "#E5FFFC";
 
 const whiteSecondaryGradients = [
-    ["#E5FFFC", "#FFFFFF"]
+    [secondaryColor, "#FFFFFF"]
 ];
-const primarySecondaryGradients = [
-    ["#F2E2FC", "#E5FFFC"]
+const secondaryPrimaryGradients = [
+    [primaryColor, secondaryColor]
 ];
 
 export default class HomeComponent extends React.Component {
@@ -15,21 +19,21 @@ export default class HomeComponent extends React.Component {
         return (
             <div className="home page">
 
-                <Row className="position-absolute page d-flex justify-content-end w-100" noGutters>
-                    <Col lg={2} sm={3}>
+                <Row className="page p-absolute" type="flex" justify="end">
+                    <Col lg={4} md={5} sm={6} xs={12}>
                         <Gradient
                             style={{ height: "80%", width: "100%" }}
                             gradients={whiteSecondaryGradients}>
                         </Gradient>
                         <Gradient
                             style={{ height: "20%", width: "100%" }}
-                            gradients={primarySecondaryGradients}>
+                            gradients={secondaryPrimaryGradients}>
                         </Gradient>
                     </Col>
-                    <Col lg={2} sm={3}>
+                    <Col lg={4} md={5} sm={6} xs={12}>
                         <Gradient
                             style={{ height: "20%", width: "100%" }}
-                            gradients={primarySecondaryGradients}
+                            gradients={secondaryPrimaryGradients}
                             angle="180deg">
                         </Gradient>
                         <Gradient
@@ -40,28 +44,31 @@ export default class HomeComponent extends React.Component {
                     </Col>
                 </Row>
 
-                <Row className="position-relative justify-content-center page" noGutters>
-                    <Col className="d-flex align-items-center">
-                        <Row className="justify-content-center" noGutters>
-                            <Col lg={8} sm={6} xs={12} >
-                                <Row noGutters>
-                                    <span className="uppercase my-5" style={{ fontWeight: "bold", fontSize: "3rem" }}>Retrouver rapidement les <span style={{ color: "#DB82FD" }}>bons plans</span> de la ville de Rennes</span>
+                <Row className="page" type="flex" justify="center" align="middle">
+                    <Col>
+
+                        <Row type="flex" justify="center" align="middle">
+                            <Col lg={16} md={14} sm={12} xs={20}>
+
+                                <Row style={{ marginBottom: "32px" }}>
+                                    <span className="title text-dark uppercase bold">Retrouvez rapidement les <span style={{ color: "#DB82FD" }}>bons plans</span> de la ville de Rennes</span>
                                 </Row>
-                                <Row className="d-flex justify-content-center" noGutters>
-                                    <Button className="uppercase my-5" variant="outline-secondary">Découvrir les bons plans</Button>
+                                <Row type="flex" justify="center">
+                                    <Button className="uppercase" >Découvrir les bons plans</Button>
                                 </Row>
+
                             </Col>
-                            <Col lg={2} sm={4} xs={6} >
+                            <Col lg={6} md={8} sm={10} xs={16}>
 
                                 <img
-                                    alt="homme métisé qui sourit"
-                                    className="img-fluid my-5"
+                                    alt="homme à lunettes qui sourit"
                                     src="/assets/image/hero_picture.jpg"
-                                    style={{ borderRadius: "50%" }}
+                                    style={{ borderRadius: "50%", height: "100%", width: "100%", margin: "32px 0" }}
                                 />
 
                             </Col>
                         </Row>
+
                     </Col>
                 </Row>
 

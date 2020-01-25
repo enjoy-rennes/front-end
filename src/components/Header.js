@@ -1,17 +1,50 @@
 // DEPENDENCY
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Menu, Icon } from "antd";
 
-export default function Header() {
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            current: this.props.pathName,
+        }
+    }
 
-    return (
-        <Navbar className="header" bg="dark" variant="dark">
-            <Navbar.Brand href="/">LOGO</Navbar.Brand>
-            <Nav className="mr-auto">
-                <Nav.Link href="/helps" >Calculer mes aides</Nav.Link>
-                <Nav.Link href="/map">La carte</Nav.Link>
-                <Nav.Link href="/contact">Contact</Nav.Link>
-            </Nav>
-        </Navbar>
-    );
+    handleMenuClick = e => {
+        this.setState({
+            current: e.key,
+        });
+    };
+
+    render() {
+
+        return (
+            <Menu onClick={this.handleMenuClick} selectedKeys={[this.props.pathName]} mode="horizontal">
+                <Menu.Item key="home">
+                    <a href="/" rel="noopener noreferrer">
+                        <Icon type="home" />
+                        Accueil
+                    </a>
+                </Menu.Item>
+                <Menu.Item key="helps" >
+                    <a href="/helps" rel="noopener noreferrer">
+                        <Icon type="euro" />
+                        Calculer mes aides
+                    </a>
+                </Menu.Item>
+                <Menu.Item key="map">
+                    <a href="/map" rel="noopener noreferrer">
+                        <Icon type="compass" />
+                        Carte
+                    </a>
+                </Menu.Item>
+                <Menu.Item key="contact">
+                    <a href="/contact" rel="noopener noreferrer">
+                        <Icon type="mail" />
+                        Contact
+                    </a>
+                </Menu.Item>
+            </Menu>
+        )
+    }
 }

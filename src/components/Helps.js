@@ -1,6 +1,5 @@
 // DEPENDENCY
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 // COMPONENT
 import HelpsListComponent from "./HelpsList";
 import HelpsFormComponent from "./HelpsForm";
@@ -52,16 +51,17 @@ export default class HelpsComponent extends React.Component {
     render() {
         const { helpsList } = this.state
         return (
-            <Container className="helps-component">
-                <Row>
-                    <Col>
-                        <HelpsFormComponent />
-                    </Col>
-                    <Col>
-                        <HelpsListComponent data={helpsList} />
-                    </Col>
-                </Row>
-            </Container>
+            <div></div>
+            // <Container className="helps-component">
+            //     <Row>
+            //         <Col>
+            //             <HelpsFormComponent />
+            //         </Col>
+            //         <Col>
+            //             <HelpsListComponent data={helpsList} />
+            //         </Col>
+            //     </Row>
+            // </Container>
         );
     }
 }

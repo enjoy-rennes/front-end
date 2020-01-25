@@ -7,13 +7,14 @@ export default class MapComponent extends React.Component {
         this.state = {
             height: 600,
             width: 800,
+            zoomLevel: 13,
         }
     }
 
     render() {
-        const { height, width } = this.state;
+        const { height, width, zoomLevel } = this.state;
         return (
-            <iframe className="map-component" title="enjoy-rennes-maps" src="https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH" width={width} height={height}></iframe>
+            <iframe className="map-component" title="enjoy-rennes-maps" src={"https://www.google.com/maps/d/u/1/embed?mid=18FeJq0Bbd8iDlUVpYlhhUWlQnLsx3kfH&z=" + zoomLevel} width={width} height={height}></iframe>
         );
     }
 
@@ -29,5 +30,4 @@ export default class MapComponent extends React.Component {
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
     }
-
 }
