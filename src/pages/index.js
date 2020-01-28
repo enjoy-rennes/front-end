@@ -14,11 +14,11 @@ const { Header, Content, Footer } = Layout;
 const indexPage = () => {
     return (
         <Layout className="home-page">
+            <Head>
+                <meta name="description" content="Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, aides au logement, des réductions et des moyens anti-gaspi." />
+                <title>Enjoy Rennes</title>
+            </Head>
             <Header className="header">
-                <Head>
-                    <meta name="description" content="Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, aides au logement, des réductions et des moyens anti-gaspi." />
-                    <title>Enjoy Rennes</title>
-                </Head>
                 <HeaderComponent pathName="home" />
             </Header>
 

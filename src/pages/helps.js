@@ -14,11 +14,11 @@ const { Header, Content, Footer } = Layout;
 function HelpsPage() {
     return (
         <Layout className="helps-page">
+            <Head>
+                <meta name="description" content="Découvrez les aides que vous pouvez bénéficier dès à présent." />
+                <title>Enjoy Rennes - Calculer mes aides</title>
+            </Head>
             <Header className="header">
-                <Head>
-                    <meta name="description" content="Découvrez les aides que vous pouvez bénéficier dès à présent." />
-                    <title>Enjoy Rennes - Calculer mes aides</title>
-                </Head>
                 <HeaderComponent pathName="helps" />
             </Header>
 

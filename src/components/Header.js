@@ -1,6 +1,7 @@
 // DEPENDENCY
 import React from "react";
 import { Menu, Icon } from "antd";
+import Link from 'next/link';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -17,32 +18,39 @@ export default class Header extends React.Component {
     };
 
     render() {
-
         return (
-            <Menu onClick={this.handleMenuClick} selectedKeys={[this.props.pathName]} mode="horizontal">
+            <Menu onClick={this.handleMenuClick} selectedKeys={[this.state.current]} mode="horizontal">
                 <Menu.Item key="home">
-                    <a href="/" rel="noopener noreferrer">
-                        <Icon type="home" />
-                        Accueil
+                    <Link href="/" >
+                        <a rel="noopener noreferrer">
+                            <Icon type="home" />
+                            Accueil
                     </a>
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="helps" >
-                    <a href="/helps" rel="noopener noreferrer">
-                        <Icon type="euro" />
-                        Calculer mes aides
+                    <Link href="/helps" >
+                        <a rel="noopener noreferrer">
+                            <Icon type="euro" />
+                            Calculer mes aides
                     </a>
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="map">
-                    <a href="/map" rel="noopener noreferrer">
-                        <Icon type="compass" />
-                        Carte
+                    <Link href="/map" >
+                        <a rel="noopener noreferrer">
+                            <Icon type="compass" />
+                            Carte
                     </a>
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="contact">
-                    <a href="/contact" rel="noopener noreferrer">
-                        <Icon type="mail" />
-                        Contact
+                    <Link href="/contact">
+                        <a rel="noopener noreferrer">
+                            <Icon type="mail" />
+                            Contact
                     </a>
+                    </Link>
                 </Menu.Item>
             </Menu>
         )

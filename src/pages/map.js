@@ -14,11 +14,11 @@ const { Header, Content, Footer } = Layout;
 function MapPage() {
     return (
         <Layout className="map-page">
+            <Head>
+                <meta name="description" content="Découvrez les aides financières, les aides au logement, les réductions et des moyens anti-gaspi autour de vous à Rennes." />
+                <title>Enjoy Rennes - La Carte</title>
+            </Head>
             <Header className="header">
-                <Head>
-                    <meta name="description" content="Découvrez les aides financières, les aides au logement, les réductions et des moyens anti-gaspi autour de vous à Rennes." />
-                    <title>Enjoy Rennes - La Carte</title>
-                </Head>
                 <HeaderComponent pathName="map" />
             </Header>
 

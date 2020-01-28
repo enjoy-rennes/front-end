@@ -14,11 +14,11 @@ const { Header, Content, Footer } = Layout;
 function ContactPage() {
     return (
         <Layout className="contact-page">
+            <Head>
+                <meta name="description" content="Contacter Enjoy Rennes." />
+                <title>Enjoy Rennes - Contact</title>
+            </Head>
             <Header className="header">
-                <Head>
-                    <meta name="description" content="Contacter Enjoy Rennes." />
-                    <title>Enjoy Rennes - Contact</title>
-                </Head>
                 <HeaderComponent pathName="contact" />
             </Header>
 

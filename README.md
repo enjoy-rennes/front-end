@@ -22,7 +22,3 @@ yarn dev
 👤 **PANNETIER Alexis**
 
 * Github: [@Alexis-Pannetier](https://github.com/Alexis-Pannetier)
-
-## Show your support
-
-Give a ⭐️ if you like the project !
