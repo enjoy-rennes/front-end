@@ -6,39 +6,27 @@ import { Layout } from 'antd';
 // COMPONENT
 import AppLayout from "../components/AppLayout";
 import Error404Component from "../components/Error404";
-import FooterComponent from "../components/Footer";
-import HeaderComponent from "../components/Header";
-
-const { Header, Content, Footer } = Layout;
 
 function Error({ statusCode }) {
     return (
-        <Layout className="error-page">
-            <Header className="header">
-                <Head>
-                    <meta name="referrer" content="no-referrer" />
-                    <meta name="robots" content="noindex" />
-                    <meta name="description" content="Page non trouvé." />
-                    <title>Enjoy Rennes - Erreur</title>
-                </Head>
-                <HeaderComponent pathName="" />
-            </Header>
+        <section className="error-page">
+            <Head>
+                <meta name="referrer" content="no-referrer" />
+                <meta name="robots" content="noindex" />
+                <meta name="description" content="Page non trouvé." />
+                <title>Enjoy Rennes - Erreur</title>
+            </Head>
 
-            <Content className="content">
-                <p>
-                    {statusCode
-                        ? `Erreur : ${statusCode}`
-                        : "Une erreur s'est produite"}
-                </p>
-                {statusCode == 404
-                    ? <Error404Component />
-                    : ""}
-            </Content>
+            <p>
+                {statusCode
+                    ? `Erreur : ${statusCode}`
+                    : "Une erreur s'est produite"}
+            </p>
+            {statusCode == 404
+                ? <Error404Component />
+                : ""}
 
-            <Footer>
-                <FooterComponent />
-            </Footer>
-        </Layout >
+        </section >
     )
 }
 

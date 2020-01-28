@@ -1,10 +1,8 @@
 // DEPENDENCY
 import React from "react";
-import { IoIosMail } from "react-icons/io";
-import { FaUser } from "react-icons/fa";
-import { TiDocumentText } from "react-icons/ti";
+import { Form, Icon, Input, Button, Checkbox } from "antd";
 
-export default class ContactForm extends React.Component {
+class ContactForm extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -24,104 +22,55 @@ export default class ContactForm extends React.Component {
         });
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
         e.preventDefault();
-        fetch("http://localhost:3002/send", {
-            method: "POST",
-            body: JSON.stringify(this.state),
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-        }).then(
-            (response) => (response.json())
-        ).then((response) => {
-            if (response.status === "success") {
-                alert("Message Sent.");
-                this.resetForm()
-            } else if (response.status === "fail") {
-                alert("Message failed to send.")
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                console.log("Received values of form: ", values);
             }
-        })
-    }
+        });
+    };
 
     render() {
+        const { getFieldDecorator } = this.props.form;
+
         return (
-            <div></div>
-            // <Form onSubmit={this.handleSubmit} className="contact-form m-auto" >
-            //     <Form.Row>
-            //         <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
-            //             <InputGroup>
-            //                 <InputGroup.Prepend>
-            //                     <InputGroup.Text>
-            //                         <FaUser id="name-input" />
-            //                     </InputGroup.Text>
-            //                 </InputGroup.Prepend>
-            //                 <Form.Control
-            //                     aria-label="Name"
-            //                     aria-describedby="name-input"
-            //                     name="name"
-            //                     onChange={this.handleInputChange}
-            //                     placeholder="Name"
-            //                     required
-            //                     type="text"
-            //                 />
-            //             </InputGroup>
-            //         </Form.Group>
-            //     </Form.Row>
+            <Form onSubmit={this.handleSubmit} className="login-form">
+                <Form.Item>
+                    {getFieldDecorator("username")(
+                        <Input
+                            prefix={<Icon type="user" className="text-black" />}
+                            placeholder="Nom d'utilisateur"
+                        />,
+                    )}
+                </Form.Item>
+                <Form.Item>
+                    {getFieldDecorator("mail", {
+                        rules: [{ required: true, message: "Veuillez renseigner votre nom d'utilsiateur" }],
+                    })(
+                        <Input
+                            prefix={<Icon type="mail" className="text-black" />}
+                            placeholder="Email"
+                        />,
+                    )}
+                </Form.Item>
+                <Form.Item>
+                    {getFieldDecorator("message", {
+                        rules: [{ required: true, message: "Veuillez renseigner votre message" }],
+                    })(
+                        <Input.TextArea
+                            prefix={<Icon type="message" className="text-black" />}
+                            placeholder="Message"
+                        />,
+                    )}
+                </Form.Item>
 
-            //     <Form.Row>
-            //         <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
-            //             <InputGroup>
-            //                 <InputGroup.Prepend>
-            //                     <InputGroup.Text>
-            //                         <IoIosMail id="email-input" />
-            //                     </InputGroup.Text>
-            //                 </InputGroup.Prepend>
-            //                 <Form.Control
-            //                     aria-label="Email"
-            //                     aria-describedby="email-input"
-            //                     name="email"
-            //                     onChange={this.handleInputChange}
-            //                     placeholder="E-mail*"
-            //                     required
-            //                     type="email"
-            //                 />
-            //             </InputGroup>
-            //         </Form.Group>
-            //     </Form.Row>
-
-            //     <Form.Row>
-            //         <Form.Group as={Col} md={{ span: 8, offset: 2 }}>
-            //             <InputGroup>
-            //                 <InputGroup.Prepend>
-            //                     <InputGroup.Text>
-            //                         <TiDocumentText id="description-input" />
-            //                     </InputGroup.Text>
-            //                 </InputGroup.Prepend>
-            //                 <Form.Control
-            //                     aria-label="Description"
-            //                     aria-describedby="description-input"
-            //                     as="textarea"
-            //                     placeholder="Message*"
-            //                     required />
-            //             </InputGroup>
-            //         </Form.Group>
-            //     </Form.Row>
-
-            //     <Form.Group>
-            //         <Form.Check type="checkbox" id="checkbox-conditions">
-            //             <Form.Check.Input
-            //                 name="message"
-            //                 onChange={this.handleInputChange}
-            //                 required
-            //                 type="checkbox" />
-            //             <Form.Check.Label>Accepter les termes et conditions*</Form.Check.Label>
-            //         </Form.Check>
-            //     </Form.Group>
-
-            //     <Button className="text-light" variant="dark" type="submit">Submit form</Button>
-            // </Form>
-        );
+                <Button type="primary" htmlType="submit" className="login-form-button">
+                    Envoyer
+                     </Button>
+            </Form>
+        )
     }
 }
+
+export default Form.create()(ContactForm)

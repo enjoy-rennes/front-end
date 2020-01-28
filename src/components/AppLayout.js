@@ -1,13 +1,30 @@
 // DEPENDENCY
 import React, { Component } from "react";
+import { Layout } from 'antd';
+
+import FooterComponent from "../components/Footer";
+import HeaderComponent from "../components/Header";
 
 const AppLayout = (ComposedComponent) => {
     class AppLayout extends Component {
         render() {
+            const { Header, Content, Footer } = Layout;
+
             return (
-                <section className="app">
-                    <ComposedComponent {...this.props} />
-                </section>
+                <Layout className="app">
+
+                    <Header className="header">
+                        <HeaderComponent />
+                    </Header>
+
+                    <Content >
+                        <ComposedComponent {...this.props} />
+                    </Content>
+
+                    <Footer>
+                        <FooterComponent />
+                    </Footer>
+                </Layout>
             );
         }
     }
