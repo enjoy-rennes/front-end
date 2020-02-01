@@ -10,20 +10,7 @@ body {
 
 .page {
   width: 100%;
-  // min-height: 100vh;
-  min-height: calc(100vh - @header-height);
-}
-
-.header{
-  height: @header-height!important;
-  padding: 0!important;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
-
-.content {
-  margin-top: @header-height;
+  min-height: 100vh;
 }
 
 .bold {
@@ -50,6 +37,10 @@ body {
 }
 
 // DISPLAY
+.w-100{
+  width: 100%!important;
+}
+
 .vh-100{
   height: 100vh;
 }
@@ -76,25 +67,25 @@ body {
 
 // COLOR
 .text-primary {
-  color: @primary-brand!important;
+  color: @primary-color!important;
 }
 
 .text-secondary {
-  color: @secondary-brand!important;
+  color: @secondary-color!important;
 }
 
-.text-dark {
-  color: @dark-color!important;
+.text-black {
+  color: black!important;
   
 }
 .text-white {
-  color: @white-color!important;
+  color: white!important;
 }
 
 .bg-primary {
-  background-color: @primary-brand!important;
+  background-color: @primary-color!important;
 }
 
 .bg-secondary {
-  background-color: @secondary-brand!important;
+  background-color: @secondary-color!important;
 }

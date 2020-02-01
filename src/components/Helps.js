@@ -1,8 +1,10 @@
 // DEPENDENCY
 import React from "react";
+import { Col, Row } from "antd";
+
 // COMPONENT
 import HelpsListComponent from "./HelpsList";
-import HelpsFormComponent from "./HelpsForm";
+import HelpsFormComponent from "./form/HelpsForm";
 
 export default class HelpsComponent extends React.Component {
     constructor() {
@@ -51,17 +53,14 @@ export default class HelpsComponent extends React.Component {
     render() {
         const { helpsList } = this.state
         return (
-            <div></div>
-            // <Container className="helps-component">
-            //     <Row>
-            //         <Col>
-            //             <HelpsFormComponent />
-            //         </Col>
-            //         <Col>
-            //             <HelpsListComponent data={helpsList} />
-            //         </Col>
-            //     </Row>
-            // </Container>
+            <Row>
+                <Col>
+                    <HelpsFormComponent />
+                </Col>
+                <Col>
+                    <HelpsListComponent data={helpsList} />
+                </Col>
+            </Row>
         );
     }
 }

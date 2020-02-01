@@ -1,6 +1,6 @@
 // DEPENDENCY
 import React from "react";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Form, Icon, Input, Button } from "antd";
 
 class ContactForm extends React.Component {
     constructor() {

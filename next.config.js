@@ -29,7 +29,6 @@ module.exports = withLess({
                 },
                 ...(typeof origExternals[0] === 'function' ? [] : origExternals),
             ]
-
             config.module.rules.unshift({
                 test: antStyles,
                 use: 'null-loader',
@@ -38,4 +37,3 @@ module.exports = withLess({
         return config
     },
 })
-

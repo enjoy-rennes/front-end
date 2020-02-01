@@ -1,5 +1,6 @@
 // DEPENDENCY
 import React from "react";
+import "../styles/base.less";
 
 export default class MapComponent extends React.Component {
     constructor() {
@@ -19,7 +20,7 @@ export default class MapComponent extends React.Component {
     }
 
     updateDimensions = () => {
-        this.setState({ width: window.innerWidth, height: window.innerHeight - 200 });
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     };
 
     componentDidMount() {

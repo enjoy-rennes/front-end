@@ -4,7 +4,7 @@ import React from "react";
 
 // COMPONENT
 import AppLayout from "../components/AppLayout";
-import ContactForm from "../components/ContactForm";
+import ContactComponent from "../components/Contact";
 
 function ContactPage() {
     return (
@@ -16,7 +16,7 @@ function ContactPage() {
 
             <section className="content">
                 <h2>Contact</h2>
-                <ContactForm />
+                <ContactComponent />
             </section>
 
         </section >

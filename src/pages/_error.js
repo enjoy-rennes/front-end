@@ -1,15 +1,23 @@
 // DEPENDENCY
 import React from "react";
 import Head from "next/head";
-import { Layout } from 'antd';
+import Lottie from 'react-lottie'
+import { Layout, Row } from 'antd';
+import animationData from '../../public/assets/error404.json'
 
 // COMPONENT
-import AppLayout from "../components/AppLayout";
-import Error404Component from "../components/Error404";
+import FooterComponent from "../components/Footer";
+import SiderComponent from "../components/Sider";
 
 function Error({ statusCode }) {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData
+    };
+    const { Header, Content, Footer } = Layout;
     return (
-        <section className="error-page">
+        <Layout className="error-page vh-100">
             <Head>
                 <meta name="referrer" content="no-referrer" />
                 <meta name="robots" content="noindex" />
@@ -17,22 +25,35 @@ function Error({ statusCode }) {
                 <title>Enjoy Rennes - Erreur</title>
             </Head>
 
-            <p>
-                {statusCode
-                    ? `Erreur : ${statusCode}`
-                    : "Une erreur s'est produite"}
-            </p>
-            {statusCode == 404
-                ? <Error404Component />
-                : ""}
+            <SiderComponent />
 
-        </section >
+            <Content>
+                <Row type="flex" justify="center">
+                    <span>
+                        {statusCode
+                            ? "Erreur: " + statusCode
+                            : "Impossible d'afficher la page"}
+                    </span>
+                </Row>
+                {statusCode == 404 &&
+                    <Lottie options={defaultOptions}
+                        height={400}
+                        width={800}
+                    />
+                }
+
+                <Footer>
+                    <FooterComponent />
+                </Footer>
+
+            </Content>
+        </Layout>
     )
 }
-
-export default AppLayout(Error);
 
 Error.getInitialProps = ({ res, err }) => {
     const statusCode = res ? res.statusCode : err ? err.statusCode : 404
     return { statusCode }
 }
+
+export default Error;
