@@ -1,6 +1,7 @@
 // DEPENDENCY
 import React from "react";
 import { Col, Row } from "antd";
+import { FullPage, Slide } from 'react-full-page';
 
 // COMPONENT
 import HelpsListComponent from "./HelpsList";
@@ -53,14 +54,20 @@ export default class HelpsComponent extends React.Component {
     render() {
         const { helpsList } = this.state
         return (
-            <Row>
-                <Col>
-                    <HelpsFormComponent />
-                </Col>
-                <Col>
-                    <HelpsListComponent data={helpsList} />
-                </Col>
-            </Row>
+            <FullPage className="helps bg-primary">
+
+                <Slide className="page bg-primary">
+                    <Row className="content" type="flex" justify="center" align="middle">
+                        <Col>
+                            <HelpsFormComponent />
+                        </Col>
+                        <Col>
+                            <HelpsListComponent data={helpsList} />
+                        </Col>
+                    </Row>
+                </Slide>
+
+            </FullPage>
         );
     }
 }

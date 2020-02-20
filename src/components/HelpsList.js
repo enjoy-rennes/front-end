@@ -33,7 +33,7 @@ export default class HelpsListComponent extends React.Component {
         // }
 
         return (
-            <div className="list-component">
+            <div className="help-list">
                 {/* {list} */}
             </div>
         );

@@ -1,6 +1,6 @@
 // DEPENDENCY
 import React from "react";
-import { Form, Icon, Input, Button } from "antd";
+import { Button, Form, Icon, Input } from "antd";
 
 class ContactForm extends React.Component {
     constructor() {
@@ -35,7 +35,7 @@ class ContactForm extends React.Component {
         const { getFieldDecorator } = this.props.form;
 
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.handleSubmit} className="contact-form">
                 <Form.Item>
                     {getFieldDecorator("username")(
                         <Input

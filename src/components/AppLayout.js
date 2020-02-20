@@ -1,40 +1,25 @@
 // DEPENDENCY
 import React, { Component } from "react";
-import { Layout } from 'antd';
+import { Layout } from "antd";
 
-import FooterComponent from "../components/Footer";
-import SiderComponent from "./Sider";
+import HeaderComponent from "./Header";
 
 const AppLayout = (ComposedComponent) => {
     class AppLayout extends Component {
-        constructor() {
-            super();
-            this.state = {
-                collapsed: false,
-            }
-        }
-
-        handleCollapsedChange = collapsed => {
-            this.setState({ collapsed });
-        }
 
         render() {
-            const { Content, Footer } = Layout;
-            const { collapsed } = this.state;
+            const { Content, Header } = Layout;
+
             return (
-                <Layout className="app vh-100">
+                <Layout className="app-layout bg-primary">
+                    <Header>
+                        <HeaderComponent />
+                    </Header>
 
-                    <SiderComponent onCollapsedChange={this.handleCollapsedChange} />
-
-                    <Content >
-                        <ComposedComponent {...this.props} siderCollapsed={collapsed} />
-
-                        <Footer>
-                            <FooterComponent />
-                        </Footer>
-
+                    <Content>
+                        <ComposedComponent />
                     </Content>
-                </Layout>
+                </Layout >
             );
         }
     }

@@ -8,16 +8,13 @@ import HelpsComponent from "../components/Helps";
 
 function HelpsPage() {
     return (
-        <section className="helps-page">
+        <section className="helps-page h-100">
             <Head>
                 <meta name="description" content="Découvrez les aides que vous pouvez bénéficier dès à présent." />
                 <title>Enjoy Rennes - Calculer mes aides</title>
             </Head>
 
-            <section className="content">
-                <h2>Calculer mes aides</h2>
-                <HelpsComponent />
-            </section>
+            <HelpsComponent />
 
         </section >
     );

@@ -8,15 +8,13 @@ import HomeComponent from "../components/Home";
 
 const indexPage = () => {
     return (
-        <section className="home-page">
+        <section className="home-page h-100">
             <Head>
                 <meta name="description" content="Enjoy Rennes est une appli qui permet aux citoyens Rennais de trouver des aides financières, aides au logement, des réductions et des moyens anti-gaspi." />
                 <title>Enjoy Rennes</title>
             </Head>
 
-            <section className="content">
-                <HomeComponent />
-            </section>
+            <HomeComponent />
 
         </section >
     );

@@ -2,12 +2,13 @@
 import React from "react";
 import Head from "next/head";
 import Lottie from 'react-lottie'
-import { Layout, Row } from 'antd';
-import animationData from '../../public/assets/error404.json'
+import { Col, Layout, Row } from 'antd';
 
 // COMPONENT
-import FooterComponent from "../components/Footer";
-import SiderComponent from "../components/Sider";
+import HeaderComponent from "../components/Header";
+
+// Assets
+import animationData from '../../public/assets/error404.json'
 
 function Error({ statusCode }) {
     const defaultOptions = {
@@ -15,9 +16,9 @@ function Error({ statusCode }) {
         autoplay: true,
         animationData: animationData
     };
-    const { Header, Content, Footer } = Layout;
+    const { Header, Content } = Layout;
     return (
-        <Layout className="error-page vh-100">
+        <div className="error-page">
             <Head>
                 <meta name="referrer" content="no-referrer" />
                 <meta name="robots" content="noindex" />
@@ -25,29 +26,34 @@ function Error({ statusCode }) {
                 <title>Enjoy Rennes - Erreur</title>
             </Head>
 
-            <SiderComponent />
+            <Layout className="bg-primary">
 
-            <Content>
-                <Row type="flex" justify="center">
-                    <span>
-                        {statusCode
-                            ? "Erreur: " + statusCode
-                            : "Impossible d'afficher la page"}
-                    </span>
-                </Row>
-                {statusCode == 404 &&
-                    <Lottie options={defaultOptions}
-                        height={400}
-                        width={800}
-                    />
-                }
+                <Header>
+                    <HeaderComponent />
+                </Header>
 
-                <Footer>
-                    <FooterComponent />
-                </Footer>
+                <Content className="page">
+                    <Row className="content" type="flex" justify="center" align="middle">
+                        <Col>
+                            {statusCode == 404 ?
+                                <Lottie options={defaultOptions}
+                                    height={400}
+                                    width={800}
+                                />
+                                :
+                                <span className="text-white">
+                                    {statusCode
+                                        ? "Erreur: " + statusCode
+                                        : "Impossible d'afficher la page"}
+                                </span>
+                            }
+                        </Col>
 
-            </Content>
-        </Layout>
+                    </Row>
+                </Content>
+
+            </Layout>
+        </div>
     )
 }
 
