@@ -4,7 +4,7 @@ import React from "react";
 
 // COMPONENT
 import AppLayout from "../components/AppLayout";
-import HelpsComponent from "../components/Helps";
+import HelpsContainer from "../containers/HelpsContainer";
 
 function HelpsPage() {
     return (
@@ -14,7 +14,7 @@ function HelpsPage() {
                 <title>Enjoy Rennes - Calculer mes aides</title>
             </Head>
 
-            <HelpsComponent />
+            <HelpsContainer />
 
         </section >
     );

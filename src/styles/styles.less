@@ -10,30 +10,13 @@ body {
 
 .page {
   height: 100vh;
-  width: 100vw;
-  padding-top: @menu-height;
+  padding-top: @menu-height!important;
 }
 
 .content {
   height: 100%;
   margin: auto;
-  
-  // XS
-  @media (max-width: 576px) {
-    width: 100%;
-  }
-  // SM
-  @media (min-width: 576px) {
-    width: 90%;
-  }
-  // LG
-  @media (min-width: 992px) {
-    width: 80%;
-  }
-  // xxl
-  @media (min-width: 1600px) {
-    width: 60%;
-  }
+  width: 100%;
 }
 
 .title{
@@ -55,9 +38,32 @@ text-align: center;
   }
   // xxl
 @media (min-width: 1600px) {
-    font-size: 80px;
+    font-size: 96px;
   }
 }
+
+.subtitle{
+  color: white;
+  text-align: center;
+  // text-transform: uppercase;
+  
+    // XS
+  @media (max-width: 576px) {
+      font-size: 24px;
+    }
+    // SM
+  @media(min-width: 576px) {
+      font-size: 32px;
+    }
+    // LG
+  @media (min-width: 992px) {
+      font-size: 48px;
+    }
+    // xxl
+  @media (min-width: 1600px) {
+      font-size: 64px;
+    }
+  }
 
 // DISPLAY
 .h-100{
@@ -78,6 +84,10 @@ text-align: center;
 
 .w-100{
   width: 100%;
+}
+
+.m-auto {
+  margin : auto;
 }
 
 // COLOR
