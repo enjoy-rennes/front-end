@@ -10,7 +10,7 @@ export default class ContactComponent extends React.Component {
     render() {
         return (
             <div className="contact page">
-                <RowContent className="content">
+                <RowContent>
                     <ContactFormComponent />
                 </RowContent>
             </div>

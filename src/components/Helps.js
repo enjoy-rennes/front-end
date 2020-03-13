@@ -7,7 +7,7 @@ import HelpsContainer from "../containers/HelpsContainer";
 export default class HelpsComponent extends React.Component {
     render() {
         return (
-            <div className="helps bg-primary">
+            <div className="helps">
                 <HelpsContainer />
             </div>
         );

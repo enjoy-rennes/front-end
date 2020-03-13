@@ -8,7 +8,7 @@ import ContactComponent from "../components/Contact";
 
 function ContactPage() {
     return (
-        <section className="contact-page h-100">
+        <section className="contact-page">
             <Head>
                 <meta name="description" content="Contacter Enjoy Rennes." />
                 <title>Enjoy Rennes - Contact</title>

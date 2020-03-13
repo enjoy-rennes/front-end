@@ -10,7 +10,7 @@ export default class HomeComponent extends React.Component {
         return (
             <FullPage className="home" duration={500} >
 
-                <Slide className="page bg-primary">
+                <Slide className="page">
                     <Row className="content" type="flex" justify="center" align="middle">
                         <Col>
                             <h2 className="title" >Retrouvez rapidement les <span className="bg-black text-primary">bons plans</span> de la ville de Rennes</h2>
@@ -44,7 +44,7 @@ export default class HomeComponent extends React.Component {
                     </Row>
                 </Slide>
 
-                <Slide className="page bg-primary">
+                <Slide className="page">
                     <Row className="content" type="flex" justify="center" align="middle">
                         <Col>
 

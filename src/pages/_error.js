@@ -26,7 +26,7 @@ function Error({ statusCode }) {
                 <title>Enjoy Rennes - Erreur</title>
             </Head>
 
-            <Layout className="bg-primary">
+            <Layout>
 
                 <Header>
                     <HeaderComponent />

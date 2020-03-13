@@ -8,7 +8,7 @@ import HelpsContainer from "../containers/HelpsContainer";
 
 function HelpsPage() {
     return (
-        <section className="helps-page h-100">
+        <section className="helps-page">
             <Head>
                 <meta name="description" content="Découvrez les aides que vous pouvez bénéficier dès à présent." />
                 <title>Enjoy Rennes - Calculer mes aides</title>

@@ -11,12 +11,12 @@ const AppLayout = (ComposedComponent) => {
             const { Content, Header } = Layout;
 
             return (
-                <Layout className="app-layout bg-primary">
+                <Layout className="app-layout">
                     <Header>
                         <HeaderComponent />
                     </Header>
 
-                    <Content>
+                    <Content >
                         <ComposedComponent />
                     </Content>
                 </Layout >
