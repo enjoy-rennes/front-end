@@ -3,7 +3,7 @@ import Head from "next/head";
 import React from "react";
 
 // COMPONENT
-import AppLayout from "../components/AppLayout";
+import AppLayout from "../components/layout/AppLayout";
 import MapComponent from "../components/Map";
 
 function MapPage() {

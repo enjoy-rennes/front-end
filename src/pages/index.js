@@ -3,8 +3,8 @@ import Head from "next/head";
 import React from "react";
 
 // COMPONENT
-import AppLayout from "../components/AppLayout";
-import HomeComponent from "../components/Home";
+import AppLayout from "../components/layout/AppLayout";
+import HomeContainer from "../containers/HomeContainer";
 
 const indexPage = () => {
     return (
@@ -14,7 +14,7 @@ const indexPage = () => {
                 <title>Enjoy Rennes</title>
             </Head>
 
-            <HomeComponent />
+            <HomeContainer />
 
         </section >
     );

@@ -1,18 +1,17 @@
 // DEPENDENCY
 import React from "react";
-import { Row } from "antd";
 
 // COMPONENT
 import ContactFormComponent from "./form/ContactForm";
-import RowContent from "./RowContent";
+import RowLayout from "./layout/RowLayout";
 
 export default class ContactComponent extends React.Component {
     render() {
         return (
             <div className="contact page">
-                <RowContent>
+                <RowLayout>
                     <ContactFormComponent />
-                </RowContent>
+                </RowLayout>
             </div>
         );
     }

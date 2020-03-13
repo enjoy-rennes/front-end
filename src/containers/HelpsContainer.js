@@ -9,7 +9,7 @@ import HelpsFormComponent from "../components/form/HelpsForm";
 import { helps } from "../api/fetchData";
 
 // COMPONENTS
-import RowContent from "../components/RowContent";
+import RowLayout from "../components/layout/RowLayout";
 
 export default class HelpsContainer extends React.Component {
     constructor() {
@@ -26,13 +26,13 @@ export default class HelpsContainer extends React.Component {
     render() {
         const { helps } = this.state;
         return (
-            <div className="page help-container ">
-                <RowContent>
+            <div className="help-container page">
+                <RowLayout>
                     <HelpsFormComponent />
                     {helps &&
                         <HelpListComponent data={helps} />
                     }
-                </RowContent>
+                </RowLayout>
             </div>
         );
     }

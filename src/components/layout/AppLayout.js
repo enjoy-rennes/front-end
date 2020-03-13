@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
 
-import HeaderComponent from "./Header";
+import HeaderComponent from "../Header";
 
 const AppLayout = (ComposedComponent) => {
     class AppLayout extends Component {

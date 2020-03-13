@@ -5904,16 +5904,6 @@ react-error-overlay@5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-full-page@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/react-full-page/-/react-full-page-0.1.7.tgz#bfe8c04c07c2668d70f7399d6641aedae81baa8e"
-  integrity sha512-KdLAmNRg2Um5l00gKhI5kCD4I5ZnmG6lLmO7EIgwwLxKB17USluiToE7/m9E+rmnzkSVqcKppLE6ZBcfJTRzqg==
-
-react-gradient@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-gradient/-/react-gradient-1.0.2.tgz#eab261cfd36b3dc3fb659c4438e12a27bea1f3bd"
-  integrity sha512-0SWuauujHh0R0Q+AaogUm/t0pAblzJVW5BYoYbJ4Kh8rCEb4EomsEK8X2QiR1UXR7iOiiqRuJZixTrKeMaFuSQ==
-
 react-icons@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.8.0.tgz#229de5904809696c9f46932bd9b6126b2522866e"
