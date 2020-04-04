@@ -1,8 +1,8 @@
 // DEPENDENCY
-import React, { Component } from "react";
-import { Layout } from "antd";
+import React, { Component } from 'react';
+import { Layout } from 'antd';
 
-import HeaderComponent from "../Header";
+import HeaderComponent from '../Header';
 
 const AppLayout = (ComposedComponent) => {
     class AppLayout extends Component {
@@ -11,7 +11,7 @@ const AppLayout = (ComposedComponent) => {
             const { Content, Header } = Layout;
 
             return (
-                <Layout className="app-layout">
+                <Layout className='app-layout'>
                     <Header>
                         <HeaderComponent />
                     </Header>

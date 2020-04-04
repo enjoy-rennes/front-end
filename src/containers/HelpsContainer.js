@@ -1,15 +1,15 @@
 // DEPENDENCY
-import React from "react";
+import React from 'react';
 
 // COMPONENT
-import HelpListComponent from "../components/list/HelpList";
-import HelpsFormComponent from "../components/form/HelpsForm";
+import HelpListComponent from '../components/list/HelpList';
+import HelpsFormComponent from '../components/form/HelpsForm';
 
 // DATA
-import { getHelpsFetch } from "../fetch/help";
+import { getHelpsFetch } from '../fetch/help';
 
 // COMPONENTS
-import RowLayout from "../components/layout/RowLayout";
+import RowLayout from '../components/layout/RowLayout';
 
 export default class HelpsContainer extends React.Component {
     constructor() {
@@ -26,7 +26,7 @@ export default class HelpsContainer extends React.Component {
     render() {
         const { helps } = this.state;
         return (
-            <div className="help-container page">
+            <div className='help-container page'>
                 <RowLayout>
                     <HelpsFormComponent />
                     {helps &&

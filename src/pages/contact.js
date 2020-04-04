@@ -1,16 +1,16 @@
 // DEPENDENCY
-import Head from "next/head";
-import React from "react";
+import Head from 'next/head';
+import React from 'react';
 
 // COMPONENT
-import AppLayout from "../components/layout/AppLayout";
-import ContactComponent from "../components/Contact";
+import AppLayout from '../components/layout/AppLayout';
+import ContactComponent from '../components/Contact';
 
 function ContactPage() {
     return (
-        <section className="contact-page">
+        <section className='contact-page'>
             <Head>
-                <meta name="description" content="Contacter Enjoy Rennes." />
+                <meta name='description' content='Contacter Enjoy Rennes.' />
                 <title>Enjoy Rennes - Contact</title>
             </Head>
 

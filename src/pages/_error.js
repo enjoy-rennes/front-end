@@ -1,11 +1,11 @@
 // DEPENDENCY
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 import Lottie from 'react-lottie'
 import { Col, Layout, Row } from 'antd';
 
 // COMPONENT
-import HeaderComponent from "../components/Header";
+import HeaderComponent from '../components/Header';
 
 // Assets
 import animationData from '../../public/assets/error404.json'
@@ -18,11 +18,11 @@ function Error({ statusCode }) {
     };
     const { Header, Content } = Layout;
     return (
-        <div className="error-page">
+        <div className='error-page'>
             <Head>
-                <meta name="referrer" content="no-referrer" />
-                <meta name="robots" content="noindex" />
-                <meta name="description" content="Page non trouvé." />
+                <meta name='referrer' content='no-referrer' />
+                <meta name='robots' content='noindex' />
+                <meta name='description' content='Page non trouvé.' />
                 <title>Enjoy Rennes - Erreur</title>
             </Head>
 
@@ -32,8 +32,8 @@ function Error({ statusCode }) {
                     <HeaderComponent />
                 </Header>
 
-                <Content className="page">
-                    <Row className="content" type="flex" justify="center" align="middle">
+                <Content className='page'>
+                    <Row className='content' type='flex' justify='center' align='middle'>
                         <Col>
                             {statusCode == 404 ?
                                 <Lottie options={defaultOptions}
@@ -41,9 +41,9 @@ function Error({ statusCode }) {
                                     width={800}
                                 />
                                 :
-                                <span className="text-white">
+                                <span className='text-white'>
                                     {statusCode
-                                        ? "Erreur: " + statusCode
+                                        ? 'Erreur: ' + statusCode
                                         : "Impossible d'afficher la page"}
                                 </span>
                             }

@@ -1,6 +1,6 @@
 // DEPENDENCY
-import React from "react";
-import { Col } from "antd";
+import React from 'react';
+import { Col } from 'antd';
 
 export default class ColLayout extends React.Component {
     render() {

@@ -1,9 +1,9 @@
 // DEPENDENCY
-import React from "react";
-import Carousel from "react-multi-carousel";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
-import CardModel from "../card/CardModel";
+import CardModel from '../card/CardModel';
 
 export default class CarouselModelComponent extends React.Component {
 
@@ -36,7 +36,7 @@ export default class CarouselModelComponent extends React.Component {
             } = rest;
             // onMove means if dragging or swiping in progress.
             return (
-                <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()}>
+                <button className='react-multiple-carousel__arrow react-multiple-carousel__arrow--left' onClick={() => onClick()}>
                     <LeftOutlined className='text-primary' />
                 </button>
             )
@@ -49,7 +49,7 @@ export default class CarouselModelComponent extends React.Component {
             } = rest;
             // onMove means if dragging or swiping in progress.
             return (
-                <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()}>
+                <button className='react-multiple-carousel__arrow react-multiple-carousel__arrow--right' onClick={() => onClick()}>
                     <RightOutlined className='text-primary' />
                 </button>
             )
@@ -65,14 +65,12 @@ export default class CarouselModelComponent extends React.Component {
 
         return (
             <Carousel
-                containerClass="carousel-container"
+                containerClass='carousel-container'
                 centerMode={true}
                 customRightArrow={<CustomRightArrow />}
                 customLeftArrow={<CustomLeftArrow />}
-                dotListClass="custom-dot-list-style"
                 draggable={true}
                 infinite={true}
-                itemClass="carousel-item-padding-40-px"
                 keyBoardControl={true}
                 responsive={responsive}
                 showDots={true}

@@ -1,6 +1,6 @@
 // DEPENDENCY
-import React from "react";
-import { Card } from "antd";
+import React from 'react';
+import { Card } from 'antd';
 
 export default class CardModelComponent extends React.Component {
 
@@ -10,7 +10,7 @@ export default class CardModelComponent extends React.Component {
         return (
             <Card
                 hoverable
-                style={{ height: '100%' }}
+                style={{ marginLeft: '10px', marginRight: '10px', height: '100%' }}
                 cover={
                     <img
                         alt={alt}
