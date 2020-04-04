@@ -20,7 +20,7 @@ export default class HelpsContainer extends React.Component {
     }
 
     componentDidMount = () => {
-        this.setState({ helps: getHelps });
+        this.setState({ helps: getHelpsFetch });
     }
 
     render() {
