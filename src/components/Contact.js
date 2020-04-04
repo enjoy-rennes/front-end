@@ -2,7 +2,7 @@
 import React from "react";
 
 // COMPONENT
-import ContactFormComponent from "./form/ContactForm";
+// import ContactFormComponent from "./form/ContactForm";
 import RowLayout from "./layout/RowLayout";
 
 export default class ContactComponent extends React.Component {
@@ -10,7 +10,7 @@ export default class ContactComponent extends React.Component {
         return (
             <div className="contact page">
                 <RowLayout>
-                    <ContactFormComponent />
+                    {/* <ContactFormComponent /> */}
                 </RowLayout>
             </div>
         );

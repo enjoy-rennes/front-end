@@ -36,7 +36,7 @@ class ContactForm extends React.Component {
 
         return (
             <Form onSubmit={this.handleSubmit} className="contact-form">
-                <Form.Item>
+                {/* <Form.Item>
                     {getFieldDecorator("username")(
                         <Input
                             prefix={<Icon type="user" className="text-black" />}
@@ -67,7 +67,7 @@ class ContactForm extends React.Component {
 
                 <Button type="primary" htmlType="submit" className="login-form-button">
                     Envoyer
-                     </Button>
+                </Button> */}
             </Form>
         )
     }
