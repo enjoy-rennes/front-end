@@ -11,34 +11,32 @@ export default function MenuComponent() {
     }
     const { Item } = Menu;
     return (
-        <Menu className='menu' selectedKeys={state.pathname} mode='horizontal' theme='dark'>
+        <Menu className='menu' selectedKeys={state.pathname} mode='horizontal' theme='dark' style={{ display: 'flex' }}>
             <Item key='home'>
-                {/* TODO ADD LOGO */}
-                <div className='logo' />
                 <Link href='/'>
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Accueil</span>
             </Item>
-            <Item key='helps'>
+            <Item className='right' key='helps'>
                 <Link href='/helps' >
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Aides</span>
             </Item>
-            <Item key='map'>
+            <Item className='right' key='map'>
                 <Link href='/map' >
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Carte</span>
             </Item>
-            <Item key='contact'>
+            <Item className='right' key='contact'>
                 <Link href='/contact'>
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Contact</span>
             </Item>
-        </Menu>
+        </Menu >
     )
 }
 

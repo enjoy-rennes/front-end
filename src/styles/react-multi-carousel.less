@@ -80,7 +80,7 @@
 	transition: background .5s;
 	border-width: 2px;
 	border-style: solid;
-	border-color: grey;
+	border-color: @dark-color;
 	padding: 0;
 	margin: 0;
 	margin-right: 6px;
@@ -89,11 +89,17 @@
 }
 
 .react-multi-carousel-dot button:hover:active {
-	background: @primary-color;
+	background: @dark-color;
 }
 
-.react-multi-carousel-dot--active button {
+.react-multi-carousel-dot--active .dot-primary button {
 	background: @primary-color;
+}
+.react-multi-carousel-dot--active .dot-secondary button {
+	background: @secondary-color;
+}
+.react-multi-carousel-dot--active button {
+	background: @dark-color;
 }
 
 .react-multi-carousel-item {

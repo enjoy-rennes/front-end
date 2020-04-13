@@ -9,15 +9,6 @@ export const getHelpsFetch =
             id: 11,
             name: "Prime d'activité",
             description: "La prime d’activité remplace depuis quelques années maintenant le RSA Activité et la Prime pour l’emploi. Il est possible de faire une demande (uniquement en ligne) à tout moment. Si votre situation a évolué, n’hésitez pas à estimer vos droits à l’aide du simulateur.",
-            // conditions: [
-            //     {
-            //         id: 100,
-            //         name: "france",
-            //         operator: "=",
-            //         type: "boolean",
-            //         value: "true",
-            //     },
-            // ]
         },
         {
             id: 12,

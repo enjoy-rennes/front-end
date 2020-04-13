@@ -9,8 +9,8 @@ export default class CardModelComponent extends React.Component {
         const { alt, description, image, short_description, title } = item;
         return (
             <Card
-                hoverable
-                style={{ marginLeft: '10px', marginRight: '10px', height: '100%' }}
+                // hoverable
+                style={{ height: '100%' }}
                 cover={
                     <img
                         alt={alt}

@@ -1,14 +1,21 @@
 @import './base.less';
 
 // -----ANT DESIGN OVERRIDE-----
-// LAYOUT
 
+// DEFAULT
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600!important;
+  }
+
+// LAYOUT
 .ant-layout-header {
-    // background-color: transparent!important;
+    background-color: @dark-color!important;
     height: @menu-height!important;
+    line-height: @menu-height!important;
     padding: 0!important;
     position: fixed;
-    width:100%;
+    z-index: 100;
+    width: 100%;
 }
 
 // MENU
@@ -17,17 +24,47 @@
     line-height: @menu-height!important;
 }
 
+.ant-menu-item {
+    color: @light-color!important;
+}
+
 .ant-menu-item-selected{
-    background-color: @almost-transparent!important;
+    background-color: inherit!important;
+    color: @primary-color!important;
+    :hover {
+        color: @secondary-color!important;
+    }
 }
 
 // BUTTON
+.ant-btn{
+    border-radius: 20px!important;
+}
+
+.ant-btn:hover {
+    color: @light-color!important;
+    border-color: @light-color!important;
+    background-color: @primary-color!important;
+}
+
 .ant-btn-primary {
+    background-color: @light-color!important;
     color: @primary-color!important;
     border-color: @primary-color!important;
 }
 
+.ant-btn-primary:hover {
+    background-color: @primary-color!important;
+    color: @light-color!important;
+}
+
 .ant-btn-secondary {
+    background-color: @light-color!important;
     color: @secondary-color!important;
     border-color: @secondary-color!important;
+}
+
+.ant-btn-secondary:hover {
+    background-color: @secondary-color!important;
+    color: @light-color!important;
 }

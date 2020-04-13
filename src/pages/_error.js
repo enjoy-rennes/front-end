@@ -6,6 +6,7 @@ import { Col, Layout, Row } from 'antd';
 
 // COMPONENT
 import HeaderComponent from '../components/Header';
+import RowLayout from '../components/layout/RowLayout'
 
 // Assets
 import animationData from '../../public/assets/error404.json'
@@ -33,7 +34,7 @@ function Error({ statusCode }) {
                 </Header>
 
                 <Content className='page'>
-                    <Row className='content' type='flex' justify='center' align='middle'>
+                    <RowLayout>
                         <Col>
                             {statusCode == 404 ?
                                 <Lottie options={defaultOptions}
@@ -49,7 +50,7 @@ function Error({ statusCode }) {
                             }
                         </Col>
 
-                    </Row>
+                    </RowLayout>
                 </Content>
 
             </Layout>

@@ -8,7 +8,7 @@ import CardModel from '../card/CardModel';
 export default class CarouselModelComponent extends React.Component {
 
     render() {
-        const { data } = this.props;
+        const { data, text } = this.props;
         const GroupCardModel = [];
         const responsive = {
             desktop: {
@@ -37,7 +37,7 @@ export default class CarouselModelComponent extends React.Component {
             // onMove means if dragging or swiping in progress.
             return (
                 <button className='react-multiple-carousel__arrow react-multiple-carousel__arrow--left' onClick={() => onClick()}>
-                    <LeftOutlined className='text-primary' />
+                    <LeftOutlined className={text} />
                 </button>
             )
         };
@@ -50,7 +50,7 @@ export default class CarouselModelComponent extends React.Component {
             // onMove means if dragging or swiping in progress.
             return (
                 <button className='react-multiple-carousel__arrow react-multiple-carousel__arrow--right' onClick={() => onClick()}>
-                    <RightOutlined className='text-primary' />
+                    <RightOutlined className={text} />
                 </button>
             )
         };
@@ -80,6 +80,7 @@ export default class CarouselModelComponent extends React.Component {
                 {GroupCardModel}
 
             </Carousel >
+
         );
     }
 }
