@@ -45,24 +45,34 @@ export default class CarouselModelComponent extends React.Component {
     render() {
         const { props } = this;
         const { background, text, type } = this.state;
-        const { buttonLink, buttonText, data, description, image, imageAlt, title } = props;
-        return (
-            <div className={background} style={{ paddingBottom: '80px' }}>
-                <Row type='flex' justify='center'>
+        const { buttonLink, buttonText, data, description, image, imageAlt, title, isReverse } = props;
 
-                    <Col span={16} className='bg-light' >
-                        <RowLayout className='carousel-container-top-title'>
-                            {title}
-                            <span style={{margin: '20px 0'}}>{description}</span>
-                            <Link href={buttonLink}>
-                                <Button type={type}>{buttonText}<ArrowRightOutlined /></Button>
-                            </Link>
-                        </RowLayout>
+        return (
+            <div className={background} style={{ paddingBottom: '80px', paddingTop: '80px' }}>
+                <Row type='flex' justify='center' align='bottom'>
+
+                    <Col xs={24} sm={14} lg={18} className='bg-light' order={isReverse ? 2 : 1}>
+                        <Row className='carousel-container-top-title'>
+                            <Col>
+                                <Row>
+                                    {title}
+                                </Row>
+                                <Row>
+                                    <span style={{margin: '20px 0'}}>{description}</span>
+                                </Row>
+                                <RowLayout>
+                                    <Link href={buttonLink}>
+                                        <Button type={type}>{buttonText}<ArrowRightOutlined /></Button>
+                                    </Link>
+                                </RowLayout>
+                            </Col>
+                        </Row>
                     </Col>
 
-                    <Col span={8} className={background} >
-                        <Row type='flex' justify='end' align='bottom'>
+                    <Col xs={0} sm={10} lg={6} className={background} order={isReverse ? 1 : 2}>
+                        <Row type='flex' justify={isReverse ? 'start' : 'end'} align='bottom'>
                             <img
+                            style={{objectFit: 'cover', height: '350px'}}
                             alt={imageAlt}
                             className='carousel-container-image'
                             draggable={false}
