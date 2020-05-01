@@ -22,7 +22,7 @@ export default class HeroesComponent extends React.Component {
 
                         <Col className='title-container'>
                             <Row className='subtitle' justify='start'>
-                                <span >Soyer <span className='underline'>rusé</span> et découvrer</span>
+                                <span >Soyez <span className='underline'>rusé</span> et découvrez</span>
                             </Row>
                             <Row className='title' justify='center'>
                                 <span >les bons plans</span>
@@ -35,7 +35,7 @@ export default class HeroesComponent extends React.Component {
                     </RowLayout >
 
                     <RowLayout  >
-                        <Button className='uppercase' size='large' ghost >Découvrir <ArrowRightOutlined /></Button>
+                        <Button size='large' ghost >Découvrir <ArrowRightOutlined /></Button>
                     </RowLayout>
                 </Col>
 

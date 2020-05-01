@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 // COMPONENT
-import MenuComponent from '../components/Menu';
+import HeaderMenu from '../components/menu/HeaderMenu';
 
 // ASSET
 import Logo from './Logo';
@@ -21,7 +21,7 @@ export default class HeaderComponent extends React.Component {
                         </div>
                     </a>
                 </Link>
-                <MenuComponent />
+                <HeaderMenu />
             </div>
         )
     }

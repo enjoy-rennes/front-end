@@ -2,13 +2,15 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 
+// COMPONENT
 import HeaderComponent from '../Header';
+import FooterComponent from '../Footer';
 
 const AppLayout = (ComposedComponent) => {
     class AppLayout extends Component {
 
         render() {
-            const { Content, Header } = Layout;
+            const { Content, Footer, Header } = Layout;
 
             return (
                 <Layout className='app-layout'>
@@ -19,6 +21,10 @@ const AppLayout = (ComposedComponent) => {
                     <Content >
                         <ComposedComponent />
                     </Content>
+
+                    <Footer>
+                        <FooterComponent />
+                    </Footer>
                 </Layout >
             );
         }

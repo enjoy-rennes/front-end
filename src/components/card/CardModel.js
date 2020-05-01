@@ -1,26 +1,26 @@
 // DEPENDENCY
 import React from 'react';
-import { Card } from 'antd';
 
 export default class CardModelComponent extends React.Component {
 
     render() {
         const { item } = this.props;
         const { alt, description, image, short_description, title } = item;
+
+        const cardBackground = {
+            background: 'url(' + image + ')',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        }
+
         return (
-            <Card
-                // hoverable
-                style={{ height: '100%' }}
-                cover={
-                    <img
-                        alt={alt}
-                        draggable={false}
-                        style={{ objectFit: 'cover', height: '200px' }}
-                        src={image}
-                    />}
-            >
-                <Card.Meta title={title} description={short_description} />
-            </Card>
+
+            <div class='card' style={cardBackground}>
+                <div class='card-info'>
+                    <h6 class='card-title'>{title}</h6>
+                    <p class='card-description'>{short_description}</p>
+                </div>
+            </div>
         );
     }
 }

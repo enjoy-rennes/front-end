@@ -1,7 +1,7 @@
 // DEPENDENCY
 import React from 'react';
 import { Button, Col, Row } from 'antd';
-import { ArrowRightOutlined} from '@ant-design/icons';
+import { ArrowRightOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 
 // Component
@@ -14,8 +14,6 @@ export default class CarouselModelComponent extends React.Component {
         this.state = {
             type: 'primary',
             background: 'bg-primary',
-            text: 'text-primary',
-            dot: 'dot-primary'
         }
     }
 
@@ -29,13 +27,9 @@ export default class CarouselModelComponent extends React.Component {
             switch (type) {
                 case 'secondary':
                     this.setState({ background: 'bg-secondary' })
-                    this.setState({ text: 'text-secondary' })
-                    this.setState({ dot: 'dot-secondary' })
                     break;
-                    default:
-                        this.setState({ background: 'bg-primary' })
-                        this.setState({ text: 'text-primary' })
-                        this.setState({ dot: 'dot-secondary' })
+                default:
+                    this.setState({ background: 'bg-primary' })
                     break;
             }
             this.setState({ type: type });
@@ -44,21 +38,21 @@ export default class CarouselModelComponent extends React.Component {
 
     render() {
         const { props } = this;
-        const { background, text, type } = this.state;
+        const { background, type } = this.state;
         const { buttonLink, buttonText, data, description, image, imageAlt, title, isReverse } = props;
 
         return (
             <div className={background} style={{ paddingBottom: '80px', paddingTop: '80px' }}>
                 <Row type='flex' justify='center' align='bottom'>
 
-                    <Col xs={24} sm={14} lg={18} className='bg-light' order={isReverse ? 2 : 1}>
+                    <Col xs={24} sm={14} lg={14} className='bg-light' order={isReverse ? 2 : 1}>
                         <Row className='carousel-container-top-title'>
                             <Col>
                                 <Row>
                                     {title}
                                 </Row>
                                 <Row>
-                                    <span style={{margin: '20px 0'}}>{description}</span>
+                                    <span style={{ margin: '20px 0' }}>{description}</span>
                                 </Row>
                                 <RowLayout>
                                     <Link href={buttonLink}>
@@ -69,21 +63,26 @@ export default class CarouselModelComponent extends React.Component {
                         </Row>
                     </Col>
 
-                    <Col xs={0} sm={10} lg={6} className={background} order={isReverse ? 1 : 2}>
+                    <Col xs={0} sm={10} lg={10} className={background} order={isReverse ? 1 : 2}>
                         <Row type='flex' justify={isReverse ? 'start' : 'end'} align='bottom'>
-                            <img
-                            style={{objectFit: 'cover', height: '350px'}}
-                            alt={imageAlt}
-                            className='carousel-container-image'
-                            draggable={false}
-                            src={image}
-                            />
+                            {image &&
+                                <img
+                                    style={{ objectFit: 'cover', height: '350px' }}
+                                    alt={imageAlt}
+                                    className='carousel-container-image'
+                                    draggable={false}
+                                    src={image}
+                                />
+                            }
                         </Row>
                     </Col>
 
                 </Row>
 
-                <CarouselModel data={data} text={text} />
+                {
+                    data &&
+                    <CarouselModel data={data} />
+                }
             </div >
         );
     }

@@ -17,25 +17,32 @@ span, p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 64px;
 }
 h2 {
-  font-size: 32px;
+  font-size: 54px;
 }
 h3 {
-  font-size: 28px;
+  font-size: 3rem;
 }
 h4 {
-  font-size: 24px;
+  font-size: 32px;
 }
 h5 {
-  font-size: 20px;
+  font-size: 24px;
 }
 h6 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
-.header {
+a {
+  color: @primary-color!important;
+  :hover {
+    color:@secondary-color!important;
+  }
+}
+
+.header, .footer{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -66,13 +73,13 @@ h6 {
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  padding-top: @menu-height!important;
+  padding-top: @header-menu-height!important;
 }
 
 .logo img {
   margin: 5px;
   height: 100%;
-  max-height: calc(@menu-height - 10px);
+  max-height: calc(@header-menu-height - 10px);
 }
 
 .logo-title {
@@ -124,11 +131,11 @@ h6 {
 }
 
 .bg-dark {
-  background-color: @dark-color;
+  background-color: @dark-color!important;
 }
 
 .bg-light {
-  background-color: @light-color;
+  background-color: @light-color!important;
 }
 
 .text-primary {
@@ -140,11 +147,22 @@ h6 {
 }
 
 .text-dark {
-  color: @dark-color;
+  color: @dark-color!important;
 }
 
 .text-light {
-  color: @light-color;
+  color: @light-color!important;
+}
+
+.overlay{
+  transition:.3s all ease-in-out;
+  background: @dark-color;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 // UNDERLINE
@@ -179,8 +197,8 @@ h6 {
 }
 ::-webkit-scrollbar
 {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: @primary-color;
 }
 ::-webkit-scrollbar-thumb
@@ -246,7 +264,7 @@ h6 {
 }
 
 .title{
-font-weight: 900;
+font-weight: 800;
 color: @light-color;
 text-align: center;
 z-index: 10;
@@ -272,7 +290,7 @@ z-index: 10;
 }
 
 .subtitle{
-  font-weight: 900;
+  font-weight: 800;
   color: @dark-color;
   text-align: center;  
   // XS
@@ -300,11 +318,11 @@ z-index: 10;
   }
   // SM
   @media(min-width: 576px) {
-    margin: 20px 40px;
+    margin: 20px 48px;
     }
   // LG
   @media (min-width: 992px) {
-    margin: 40px 80px;
+    margin: 40px 96px;
     }
   }
 
@@ -312,3 +330,50 @@ z-index: 10;
     width: 100%;
     max-width: 300px;
   }
+
+  .footer-icon {
+    font-size: 24px;
+
+    // XS
+  @media (max-width: 576px) {
+    margin: auto 12px;
+  }
+  // SM
+  @media(min-width: 576px) {
+    margin: auto 24px;
+  }
+}
+
+  // ----------CARD----------
+.card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-info {
+  color: @light-color;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card-info{
+  height:100%;
+  .card-description{
+    padding:0 24px 24px;
+  }
+}
+
+.card-title {
+  color:@light-color;
+  margin: 0;
+  padding: 24px;
+}
+
+.card-description {
+  height:0;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}

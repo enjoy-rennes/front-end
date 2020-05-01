@@ -4,7 +4,7 @@ import { Menu } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 
-export default function MenuComponent() {
+export default function HeaderMenuComponent() {
     const router = useRouter()
     const state = {
         pathname: router.pathname !== '/' ? router.pathname.slice(1) : 'home',
@@ -18,19 +18,19 @@ export default function MenuComponent() {
                 </Link>
                 <span>Accueil</span>
             </Item>
-            <Item className='right' key='helps'>
+            <Item key='helps'>
                 <Link href='/helps' >
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Aides</span>
             </Item>
-            <Item className='right' key='map'>
+            <Item key='map'>
                 <Link href='/map' >
                     <a rel='noopener noreferrer' />
                 </Link>
                 <span>Carte</span>
             </Item>
-            <Item className='right' key='contact'>
+            <Item key='contact'>
                 <Link href='/contact'>
                     <a rel='noopener noreferrer' />
                 </Link>
