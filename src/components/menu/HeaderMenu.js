@@ -24,6 +24,12 @@ export default function HeaderMenuComponent() {
                 </Link>
                 <span>Aides</span>
             </Item>
+            <Item key='goodsplans'>
+                <Link href='/goods-plans'>
+                    <a rel='noopener noreferrer' />
+                </Link>
+                <span>Bons plans</span>
+            </Item>
             <Item key='map'>
                 <Link href='/map' >
                     <a rel='noopener noreferrer' />

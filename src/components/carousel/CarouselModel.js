@@ -9,7 +9,6 @@ export default class CarouselModelComponent extends React.Component {
 
     render() {
         const { data } = this.props;
-        const GroupCardModel = [];
         const responsive = {
             superLargeDesktop: {
                 breakpoint: { max: 10000, min: 1920 },
@@ -59,18 +58,13 @@ export default class CarouselModelComponent extends React.Component {
             )
         };
 
-        if (data) {
-            data.forEach(item => {
-                GroupCardModel.push(
-                    <CardModel key={item.id} item={item} />
-                )
-            });
-        }
+        const GroupCardModel = data.map((item) =>
+            <CardModel key={item.id} item={item} />
+        );
 
         return (
             <Carousel
                 containerClass='carousel-container'
-                // centerMode={true}
                 customRightArrow={<CustomRightArrow />}
                 customLeftArrow={<CustomLeftArrow />}
                 draggable={true}

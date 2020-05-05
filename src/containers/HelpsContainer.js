@@ -28,10 +28,10 @@ export default class HelpsContainer extends React.Component {
         return (
             <div className='help-container page'>
                 <RowLayout>
-                    <HelpsFormComponent />
-                    {helps &&
+                    {/* <HelpsFormComponent /> */}
+                    {/* {helps &&
                         <HelpListComponent data={helps} />
-                    }
+                    } */}
                 </RowLayout>
             </div>
         );

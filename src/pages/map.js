@@ -4,7 +4,7 @@ import React from 'react';
 
 // COMPONENT
 import AppLayout from '../components/layout/AppLayout';
-import MapComponent from '../components/Map';
+import MapContainer from '../containers/MapContainer';
 
 function MapPage() {
     return (
@@ -14,7 +14,7 @@ function MapPage() {
                 <title>Enjoy Rennes - La Carte</title>
             </Head>
 
-            <MapComponent />
+            <MapContainer />
 
         </section >
     );

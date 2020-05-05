@@ -6,6 +6,7 @@ import { Col, Layout, Row } from 'antd';
 
 // COMPONENT
 import HeaderComponent from '../components/Header';
+import FooterComponent from '../components/Footer';
 import RowLayout from '../components/layout/RowLayout'
 
 // Assets
@@ -17,7 +18,7 @@ function Error({ statusCode }) {
         autoplay: true,
         animationData: animationData
     };
-    const { Header, Content } = Layout;
+    const { Content, Footer, Header } = Layout;
     return (
         <div className='error-page'>
             <Head>
@@ -49,9 +50,12 @@ function Error({ statusCode }) {
                                 </span>
                             }
                         </Col>
-
                     </RowLayout>
                 </Content>
+
+                <Footer>
+                    <FooterComponent />
+                </Footer>
 
             </Layout>
         </div>

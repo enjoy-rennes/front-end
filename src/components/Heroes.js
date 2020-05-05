@@ -13,11 +13,12 @@ export default class HeroesComponent extends React.Component {
     render() {
 
         return (
-            <RowLayout className='page bg-primary'>
+            <RowLayout className='heroes bg-primary'>
 
                 <Col span={24}>
 
-                    <RowLayout className='row-title-container' >
+                    <Row className='row-title-container' justify='center' align='middle'>
+
                         <img className='fox position-absolute' alt="photo d'un renard en noir et blanc" src={fox} />
 
                         <Col className='title-container'>
@@ -32,7 +33,7 @@ export default class HeroesComponent extends React.Component {
                             </Row>
                         </Col>
 
-                    </RowLayout >
+                    </Row >
 
                     <RowLayout  >
                         <Button size='large' ghost >Découvrir <ArrowRightOutlined /></Button>

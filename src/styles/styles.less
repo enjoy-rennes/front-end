@@ -14,6 +14,7 @@ body {
 
 span, p, h1, h2, h3, h4, h5, h6 {
   z-index: 10;
+  margin-bottom: 0!important;
 }
 
 h1 {
@@ -45,7 +46,7 @@ a {
 .header, .footer{
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap!important;
   overflow: auto;
   div{
     display: flex;
@@ -70,10 +71,9 @@ a {
 }
 
 .page {
-  height: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - @header-menu-height - @footer-menu-height);
+  background-color: @primary-color;
   width: 100%;
-  padding-top: @header-menu-height!important;
 }
 
 .logo img {
@@ -209,7 +209,12 @@ a {
 // -----PAGES-----
 
 // HEROES
+.heroes{
+  min-height: calc(100vh - @header-menu-height);
+}
+
 .fox {
+  justify-content: center;
   height:100%;
   // XS
   @media (max-width: 576px) {
@@ -347,6 +352,7 @@ z-index: 10;
   // ----------CARD----------
 .card {
   height: 400px;
+  background-color: #bbbbbb!important;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -364,7 +370,7 @@ z-index: 10;
   }
 }
 
-.card-title {
+.card-name {
   color:@light-color;
   margin: 0;
   padding: 24px;
@@ -376,4 +382,20 @@ z-index: 10;
   margin: 0;
   padding: 0;
   font-size: 18px;
+}
+
+.cards-container{
+  margin: 16px;
+}
+
+// ----------MAPS----------
+.map {
+  min-height: 400px;
+  height: calc(100vh - (@header-menu-height + @footer-menu-height + 80px));
+  // 80px : height of h1 title : "La carte"
+  width: 100%;
+ // XS
+ @media (max-width: 576px) {
+  height: 400px;
+  }
 }
