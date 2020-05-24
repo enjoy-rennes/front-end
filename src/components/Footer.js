@@ -13,6 +13,12 @@ import RowLayout from './layout/RowLayout';
 export default class FooterComponent extends React.Component {
 
     render() {
+
+        const aStyle = {
+            lineHeight: 'normal',
+            margin: 'auto',
+        };
+
         return (
             <Row className='footer'>
                 <Col>
@@ -22,19 +28,19 @@ export default class FooterComponent extends React.Component {
                 </Col>
 
                 <Col>
-                    <a target='_blank' href='//www.facebook.com/EnjoyRennes' rel='noopener noreferrer'>
+                    <a target='_blank' style={aStyle} href='//www.facebook.com/EnjoyRennes' rel='noopener noreferrer' name='facebook'>
                         <FaFacebookF className='footer-icon' />
                     </a>
 
-                    <a target='_blank' href='//www.twitter.com/EnjoyRennes' rel='noopener noreferrer'>
+                    <a target='_blank' style={aStyle} href='//www.twitter.com/EnjoyRennes' rel='noopener noreferrer' name='twitter'>
                         <FaTwitter className='footer-icon' />
                     </a>
 
-                    <a target='_blank' href='//www.linkedin.com/company/enjoy-rennes' rel='noopener noreferrer'>
+                    <a target='_blank' style={aStyle} href='//www.linkedin.com/company/enjoy-rennes' rel='noopener noreferrer' name='linkedin'>
                         <FaLinkedinIn className='footer-icon' />
                     </a>
 
-                    <a target='_blank' href='//www.instagram.com/enjoyrennes' rel='noopener noreferrer'>
+                    <a target='_blank' style={aStyle} href='//www.instagram.com/enjoyrennes' rel='noopener noreferrer' name='instagram'>
                         <FaInstagram className='footer-icon' />
                     </a>
                 </Col>

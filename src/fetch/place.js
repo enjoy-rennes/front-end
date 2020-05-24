@@ -14,7 +14,7 @@ export const getPlaceFetch =
             name: "Frac Bretagne",
             short_description: "Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine.",
             description: "Premier né des Fonds régionaux d’art contemporain, le Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine, de favoriser la présence de celle-ci sur le territoire régional, et de sensibiliser le plus large public à l’art d’aujourd’hui.",
-            image: "https://www.fracbretagne.fr/wp-content/uploads/2018/12/BAT_Frac-Bretagne_Photo-Roland-Halbe-REGION-BRETAGNE-1_ok.jpg",
+            image: "https://medias.liberation.fr/photo/439336-frac-rennes.jpg?modified_at=1342523678&width=975",
         },
         {
             id: 100,
@@ -30,7 +30,7 @@ export const getPlaceFetch =
             name: "Frac Bretagne",
             short_description: "Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine.",
             description: "Premier né des Fonds régionaux d’art contemporain, le Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine, de favoriser la présence de celle-ci sur le territoire régional, et de sensibiliser le plus large public à l’art d’aujourd’hui.",
-            image: "https://www.fracbretagne.fr/wp-content/uploads/2018/12/BAT_Frac-Bretagne_Photo-Roland-Halbe-REGION-BRETAGNE-1_ok.jpg",
+            image: "https://medias.liberation.fr/photo/439336-frac-rennes.jpg?modified_at=1342523678&width=975",
         },
         {
             id: 100,
@@ -46,6 +46,6 @@ export const getPlaceFetch =
             name: "Frac Bretagne",
             short_description: "Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine.",
             description: "Premier né des Fonds régionaux d’art contemporain, le Frac Bretagne a pour objectif de soutenir et promouvoir la création contemporaine, de favoriser la présence de celle-ci sur le territoire régional, et de sensibiliser le plus large public à l’art d’aujourd’hui.",
-            image: "https://www.fracbretagne.fr/wp-content/uploads/2018/12/BAT_Frac-Bretagne_Photo-Roland-Halbe-REGION-BRETAGNE-1_ok.jpg",
+            image: "https://medias.liberation.fr/photo/439336-frac-rennes.jpg?modified_at=1342523678&width=975",
         },
     ]

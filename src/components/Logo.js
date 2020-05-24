@@ -11,7 +11,7 @@ export default class LogoComponent extends React.Component {
         return (
             <Row className='logo' type='flex' justify='center' align='middle'>
                 <Col>
-                    <img src={logo} />
+                    <img src={logo} alt="Logo enjoy rennes, représente un marqueur rond jaune et orange avec une tête et la queue d'un renard" />
                 </Col>
             </Row>
         )

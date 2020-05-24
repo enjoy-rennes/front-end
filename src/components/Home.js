@@ -26,7 +26,6 @@ export default class HomeComponent extends React.Component {
                     data={place}
                     imageAlt='tour de Rennes'
                     image={tower}
-                    type='secondary'
                     title={<h3 className='uppercase'>Les <span className='underline underline-secondary'>lieux</span> à découvrir sur Rennes</h3>}
                 />
 

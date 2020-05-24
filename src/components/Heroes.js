@@ -15,11 +15,14 @@ export default class HeroesComponent extends React.Component {
         return (
             <RowLayout className='heroes bg-primary'>
 
+                <Row className='position-absolute' type='center' justify='center' align='middle'>
+                    <Col span={24}>
+                        <img className='fox' alt="photo d'un renard en noir et blanc" src={fox} />
+                    </Col>
+                </Row>
+
                 <Col span={24}>
-
-                    <Row className='row-title-container' justify='center' align='middle'>
-
-                        <img className='fox position-absolute' alt="photo d'un renard en noir et blanc" src={fox} />
+                    <Row className='row-title-container' type='flex' justify='center' align='middle'>
 
                         <Col className='title-container'>
                             <Row className='subtitle' justify='start'>

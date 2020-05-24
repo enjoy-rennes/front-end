@@ -1,6 +1,6 @@
 // DEPENDENCY
 import React from 'react';
-import { Select } from 'antd';
+import { Col, Row, Select } from 'antd';
 
 // DATA
 import { getGoodsPlansFetch } from '../fetch/goods-plans';
@@ -25,13 +25,25 @@ export default class GoodsPlansContainer extends React.Component {
         const { goodsPlans } = this.state;
         const { Option } = Select;
 
+        const filtreStyle = {
+            padding: '12px',
+            color: 'white',
+            display: 'flex',
+            justifyContent: 'space-around'
+        }
+
         return (
             <div className='goods-plans-container page'>
                 <RowLayout>
-                    <h1>Les Bons plans</h1>
+                    <Col lg={12} sm={24} className='bg-light' style={{ padding: '48px' }}>
+                        <h1 className='uppercase'><span className='underline underline-primary'>Bons plans</span> à Rennes</h1>
+                    </Col>
+                    <Col lg={12} sm={0}>
+                    </Col>
                 </RowLayout>
 
-                <RowLayout>
+                <RowLayout className='bg-dark' style={filtreStyle}>
+                    <span>Filtre</span>
                     <Select
                         // defaultValue="help"
                         style={{ width: '100%', maxWidth: '200px' }}
