@@ -6,13 +6,13 @@ import { Col } from 'antd';
 import RowLayout from '../layout/RowLayout';
 import CardModel from './CardModel';
 
-export default class CardsContainer extends React.Component {
+export default class CardsContainerModel extends React.Component {
 
     render() {
         const { data } = this.props;
 
         const cardContainerStyle = {
-            padding: '16px'
+            padding: '16px 0'
         };
 
         const GroupCardModel = (data != null) && data.map((item) =>
@@ -21,15 +21,14 @@ export default class CardsContainer extends React.Component {
             </Col>
         );
 
+        console.log(data);
         return (
-            <div style={cardContainerStyle}>
-                <RowLayout >
-                    {
-                        data &&
-                        GroupCardModel
-                    }
-                </RowLayout>
-            </div>
+            <RowLayout style={cardContainerStyle}>
+                {
+                    data &&
+                    GroupCardModel
+                }
+            </RowLayout>
         );
     }
 }

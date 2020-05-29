@@ -1,14 +1,7 @@
 // DEPENDENCY
 import React from 'react';
-import Link from 'next/link';
 import { Col, Row } from 'antd';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-
-// ASSET
-import Logo from './Logo';
-
-// COMPONENT
-import RowLayout from './layout/RowLayout';
 
 export default class FooterComponent extends React.Component {
 

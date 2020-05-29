@@ -11,7 +11,7 @@ function GoodsPlansPage() {
         <section className='goods-plans-page'>
             <Head>
                 <meta name='description' content='Découvrez les bons plans à Rennes.' />
-                <title>Enjoy Rennes - Bon plan</title>
+                <title>Enjoy Rennes - Bons plans</title>
             </Head>
 
             <GoodsPlansContainer />

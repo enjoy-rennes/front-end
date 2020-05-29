@@ -1,39 +1,39 @@
 // DEPENDENCY
 import React from 'react';
+import { Spin } from 'antd';
 
 // COMPONENT
-import HelpListComponent from '../components/list/HelpList';
-import HelpsFormComponent from '../components/form/HelpsForm';
+import Helps from '../components/Helps';
 
 // DATA
 import { getHelpsFetch } from '../fetch/help';
-
-// COMPONENTS
-import RowLayout from '../components/layout/RowLayout';
 
 export default class HelpsContainer extends React.Component {
     constructor() {
         super();
         this.state = {
-            helps: undefined,
+            helps: getHelpsFetch || undefined,
         }
     }
 
-    componentDidMount = () => {
-        this.setState({ helps: getHelpsFetch });
+    componentDidMount() {
+        const helps = this.state.helps && this.state.helps.map((item) => {
+            item.buttonLink = "help/" + item.id;
+            return item;
+        });
+
+        this.setState({ helps: helps })
     }
 
     render() {
-        const { helps } = this.state;
+        let { helps } = this.state;
+
         return (
-            <div className='help-container page'>
-                <RowLayout>
-                    {/* <HelpsFormComponent /> */}
-                    {/* {helps &&
-                        <HelpListComponent data={helps} />
-                    } */}
-                </RowLayout>
-            </div>
+            <Spin spinning={!helps}>
+                {helps &&
+                    <Helps data={helps} />
+                }
+            </Spin>
         );
     }
 }

@@ -1,34 +1,29 @@
 // DEPENDENCY
 import React from 'react';
+import { Spin } from 'antd';
 
 // COMPONENT
 import Home from '../components/Home'
 
-// Fetch
+// DATA
 import { getPlaceFetch } from '../fetch/place';
 
 export default class HomeContainer extends React.Component {
     constructor() {
         super();
         this.state = {
-            place: null,
+            place: getPlaceFetch || null,
         }
-    }
-
-    componentDidMount = () => {
-        this.getPlace();
-    }
-
-    getPlace = () => {
-        this.setState({ place: getPlaceFetch });
     }
 
     render() {
         const { place } = this.state;
         return (
-            <div >
-                <Home place={place} />
-            </div>
+            <Spin spinning={!place}>
+                {place &&
+                    <Home place={place} />
+                }
+            </Spin>
         )
     }
 }

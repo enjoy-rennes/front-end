@@ -11,7 +11,7 @@ function HelpsPage() {
         <section className='helps-page'>
             <Head>
                 <meta name='description' content='Découvrez les aides que vous pouvez bénéficier dès à présent.' />
-                <title>Enjoy Rennes - Calculer mes aides</title>
+                <title>Enjoy Rennes - Aides</title>
             </Head>
 
             <HelpsContainer />
