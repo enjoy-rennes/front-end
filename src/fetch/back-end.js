@@ -1,7 +1,7 @@
 export const DOMAIN = 'http://127.0.0.1:8000/';
 
-export function fetch(pathname) {
-    const REQUEST = DOMAIN + pathname;
+export function getHelpFetch() {
+    const REQUEST = DOMAIN + 'help_list';
     return fetch(REQUEST, {
         headers: {
             Accept: 'application/json',
@@ -9,17 +9,10 @@ export function fetch(pathname) {
         }
     })
         .then(response => response.json())
-        .then(json => {
-            if (json.data) {
-                return json.data;
-            } else {
-                console.error(json.message);
-            }
-        })
-}
+        .catch(err => console.error(err));
 
-export function getHelpFetch() {
-    return fetch('help_list');
+
+    // return fetch('help_list');
 }
 
 export function getCategoryFetch() {

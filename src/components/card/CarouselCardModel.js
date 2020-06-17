@@ -1,7 +1,7 @@
 // DEPENDENCY
 import React from 'react';
 
-export default class CarousselCardModelComponent extends React.Component {
+export default class CarouselCardModelComponent extends React.Component {
 
     render() {
         const { item } = this.props;

@@ -3,7 +3,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
-import CarousselCardModel from '../card/CarousselCardModel';
+import CarouselCardModel from '../card/CarouselCardModel';
 
 export default class CarouselModelComponent extends React.Component {
 
@@ -58,8 +58,8 @@ export default class CarouselModelComponent extends React.Component {
             )
         };
 
-        const GroupCarousselCardModel = data.map((item) =>
-            <CarousselCardModel key={item.id} item={item} />
+        const GroupCarouselCardModel = data.map((item) =>
+            <CarouselCardModel key={item.id} item={item} />
         );
 
         return (
@@ -75,7 +75,7 @@ export default class CarouselModelComponent extends React.Component {
                 ssr={true}
                 swipeable={true}
             >
-                {GroupCarousselCardModel}
+                {GroupCarouselCardModel}
 
             </Carousel >
         );

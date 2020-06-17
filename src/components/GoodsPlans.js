@@ -1,10 +1,13 @@
 // DEPENDENCY
 import React from 'react';
-import { Col, Select } from 'antd';
+import { Col, Row, Select } from 'antd';
 
 // COMPONENTS
 import CardsContainerModel from '../components/card/CardsContainerModel';
 import RowLayout from '../components/layout/RowLayout';
+
+// ASSET
+import vilaine from '../../public/assets/promenade-sur-la-vilaine/promenade-sur-la-vilaine.png';
 
 export default class GoodsPlansContainer extends React.Component {
 
@@ -22,10 +25,16 @@ export default class GoodsPlansContainer extends React.Component {
         return (
             <div className='goods-plans-container page'>
                 <RowLayout>
-                    <Col lg={12} sm={24} className='bg-light' style={{ padding: '48px' }}>
+                    <Col lg={12} sm={24} style={{ padding: '48px' }}>
                         <h1 className='uppercase'><span className='underline underline-primary'>Bons plans</span> à Rennes</h1>
                     </Col>
                     <Col lg={12} sm={0}>
+                        <Row justify='end'>
+                            <img
+                                alt='Promenade sur la vilaine'
+                                src={vilaine}
+                                style={{ overflow: 'hidden', objectFit: 'cover', maxHeight: '300px' }} />
+                        </Row>
                     </Col>
                 </RowLayout>
 

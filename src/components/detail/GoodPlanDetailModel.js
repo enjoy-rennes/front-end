@@ -12,15 +12,20 @@ export default class GoodPlanDetailModel extends React.Component {
         return (
             <div className='good-plan-container page'>
                 <Row>
-                    <Col xs={24} sm={12} lg={12} >
-                        <h1>{data.name}</h1>
+                    <Col sm={24} md={12} style={{ padding: '24px' }}>
+                        <RowLayout style={{ textAlign: 'center' }}>
+                            <h1>{data.name}</h1>
+                        </RowLayout>
                     </Col>
 
-                    <Col xs={24} sm={12} lg={12} className='bg-light'>
+                    <Col sm={24} md={12} className='bg-primary'>
 
                     </Col>
-                    {data.description}
                 </Row>
+
+                <RowLayout style={{ padding: '64px' }}>
+                    {data.description}
+                </RowLayout>
             </div>
         );
     }

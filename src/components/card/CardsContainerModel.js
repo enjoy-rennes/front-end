@@ -21,7 +21,6 @@ export default class CardsContainerModel extends React.Component {
             </Col>
         );
 
-        console.log(data);
         return (
             <RowLayout style={cardContainerStyle}>
                 {
