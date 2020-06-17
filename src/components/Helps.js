@@ -28,7 +28,7 @@ export default class Helps extends React.Component {
                     <Col lg={12} sm={24} style={{ padding: '48px' }}>
                         <h1 className='uppercase'><span className='underline underline-primary'>Aides</span> à Rennes</h1>
                     </Col>
-                    <Col lg={12} sm={0} >
+                    <Col lg={12} sm={0} xs={0}>
                         <Row justify='end'>
                             <img
                                 alt='Place de la république à Rennes'
